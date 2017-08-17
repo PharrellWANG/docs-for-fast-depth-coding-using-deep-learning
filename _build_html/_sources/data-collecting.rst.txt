@@ -1,8 +1,23 @@
 Data Collecting
 ===============
 
-This document will show you how to collect the data for both training and
-testing the deep leaning model.
+This document will show you how to collect the data for *fast depth coding using deep learning*.
+
+Data Source
+-----------
+Data are collected from four video sequences.
+
+   +----+-------------------------+
+   | #  | name of the sequence    |
+   +====+=========================+
+   | 1  | poznan_hall_1920x1088   |
+   +----+-------------------------+
+   | 2  | poznan_street_1920x1088 |
+   +----+-------------------------+
+   | 3  | shark_1920x1088         |
+   +----+-------------------------+
+   | 4  | undo_dancer_1920x1088   |
+   +----+-------------------------+
 
 Path of collected data
 ----------------------
@@ -13,6 +28,17 @@ Path of collected data
    :alt: data path
 
    A screen capture of the data path.
+
+Size of collected data
+----------------------
+Size of collected data: 46.12 GB
+
+.. figure:: ./images/data-size.png
+   :scale: 100 %
+   :alt: data size
+
+   A screen capture of the data size.
+
 
 .. _effort-from-ho:
 
@@ -94,3 +120,21 @@ For pre-processing the data, we need to go through the steps below:
         2. To be fair, we will first find the class [from the 37 classes] which has the least data samples, secondly based on its amount of samples, we get the train-validation-test data sets for other classes such that all classes have the same amount of data for the deep learning.
 
 **step 4** Convert data to **TFRecord** format. (The recommended format for TensorFlow is a `TFRecord <https://www.tensorflow.org/versions/r1.1/api_guides/python/python_io#tfrecords_format_details>`_ file containing `tf.train.Example protocol buffers <https://github.com/tensorflow/tensorflow/blob/r1.1/tensorflow/core/example/example.proto>`_ (which contain Features as a field). )
+
+See two pictures below for reference.
+
+.. figure:: ./images/tfrecord-1.png
+   :scale: 50 %
+   :alt: data size
+
+   A screen capture of our TFRecord 1
+
+.. figure:: ./images/tfrecord-2.png
+   :scale: 50 %
+   :alt: data size
+
+   A screen capture of our TFRecord 2
+
+.. note::
+      1. In the two pictures above, the names of the project and file belong to the old project. Now for publishing the project I have restructured/reformatted some files.
+      2. The two pictures above only serve for demonstrating the structure of the TFRecord before they are serialized to string.

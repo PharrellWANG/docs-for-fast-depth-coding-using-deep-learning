@@ -92,7 +92,9 @@
               <p class="caption"><span class="caption-text">Data Collecting</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Collecting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-source">Data Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#path-of-collected-data">Path of collected data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#size-of-collected-data">Size of collected data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#effort-from-ho">Effort from Ho</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#effort-from-me">Effort from me</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#modifications">Modifications</a></li>
@@ -170,14 +172,52 @@
             
   <div class="section" id="data-collecting">
 <h1>Data Collecting<a class="headerlink" href="#data-collecting" title="Permalink to this headline">¶</a></h1>
-<p>This document will show you how to collect the data for both training and
-testing the deep leaning model.</p>
+<p>This document will show you how to collect the data for <em>fast depth coding using deep learning</em>.</p>
+<div class="section" id="data-source">
+<h2>Data Source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h2>
+<p>Data are collected from four video sequences.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">#</th>
+<th class="head">name of the sequence</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>poznan_hall_1920x1088</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>poznan_street_1920x1088</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>shark_1920x1088</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>undo_dancer_1920x1088</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
 <div class="section" id="path-of-collected-data">
 <h2>Path of collected data<a class="headerlink" href="#path-of-collected-data" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">/Volumes/XssdPharrell/data_collecting/</span></code></p>
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="_images/data-path.png"><img alt="data path" src="_images/data-path.png" style="width: 2106.0px; height: 478.0px;" /></a>
 <p class="caption"><span class="caption-text">A screen capture of the data path.</span></p>
+</div>
+</div>
+<div class="section" id="size-of-collected-data">
+<h2>Size of collected data<a class="headerlink" href="#size-of-collected-data" title="Permalink to this headline">¶</a></h2>
+<p>Size of collected data: 46.12 GB</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="_images/data-size.png"><img alt="data size" src="_images/data-size.png" style="width: 1470.0px; height: 584.0px;" /></a>
+<p class="caption"><span class="caption-text">A screen capture of the data size.</span></p>
 </div>
 </div>
 <div class="section" id="effort-from-ho">
@@ -285,6 +325,22 @@ facilitate the <em>model training process</em>.</p>
 </ol>
 </div>
 <p><strong>step 4</strong> Convert data to <strong>TFRecord</strong> format. (The recommended format for TensorFlow is a <a class="reference external" href="https://www.tensorflow.org/versions/r1.1/api_guides/python/python_io#tfrecords_format_details">TFRecord</a> file containing <a class="reference external" href="https://github.com/tensorflow/tensorflow/blob/r1.1/tensorflow/core/example/example.proto">tf.train.Example protocol buffers</a> (which contain Features as a field). )</p>
+<p>See two pictures below for reference.</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="_images/tfrecord-1.png"><img alt="data size" src="_images/tfrecord-1.png" style="width: 579.0px; height: 471.0px;" /></a>
+<p class="caption"><span class="caption-text">A screen capture of our TFRecord 1</span></p>
+</div>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="_images/tfrecord-2.png"><img alt="data size" src="_images/tfrecord-2.png" style="width: 436.0px; height: 254.0px;" /></a>
+<p class="caption"><span class="caption-text">A screen capture of our TFRecord 2</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>In the two pictures above, the names of the project and file belong to the old project. Now for publishing the project I have restructured/reformatted some files.</li>
+<li>The two pictures above only serve for demonstrating the structure of the TFRecord before they are serialized to string.</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
