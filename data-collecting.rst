@@ -46,18 +46,49 @@ When encoding the video sequences, for every block:
         - let's **collect** the ``INTRA_PRED[0]`` along with the **1-D Depth Data**.
 
 
-.. note:: **1-D Depth Data** means the pixel value of the depth block being **flattened** into 1 dimension. For example, to store an M x N matrix of pixel values (you can imagine those pixels forming an image, hence it is like we are storing an image), the **1-D Depth Data** (pixel values) must contain M*N values, with M rows of N contiguous values each.  That is, the 1-D data must store the matrix as: ``.... row 0 .... .... row 1 .... // ...........  // ... row M-1 ....``
+.. note::
 
-.. attention:: when collecting the data, I have made it to write 35 for mode 37, and 36 for mode 38. Hence a little time/energy is saved for the data processing.
+      1. **1-D Depth Data** means the pixel value of the depth block being **flattened** into 1 dimension. For example, to store an M x N matrix of pixel values (you can imagine those pixels forming an image, hence it is like we are storing an image), the **1-D Depth Data** (pixel values) must contain M*N values, with M rows of N contiguous values each.  That is, the 1-D data must store the matrix as: ``.... row 0 .... .... row 1 .... // ...........  // ... row M-1 ....``
+
+      2. when collecting the data, I have made it to write 35 for mode 37, and 36 for mode 38. Hence a little time/energy is saved for the data processing.
 
 Project
 ~~~~~~~
+
+About the Project
+^^^^^^^^^^^^^^^^^
+
 Based on the above ideas, I have created a project in Python for pre processing the data.
 
 Anyone can clone the codebase of the project from GitHub. You can view the codes after you obtained your copy.
 
-* Project name: **data-processing-for-fdc**
+:Date: 2017-08-17
+:Version: 0.1.0
+:Author: Pharrell.zx WANG
+:Name: **data-processing-for-fdc**
+:GitHub: `data-processing-for-fast-depth-coding <https://github.com/PharrellWANG/data-processing-for-fdc>`_.
+:License: `MIT License <https://choosealicense.com/licenses/mit/>`_.
 
-* GitHub Repository: `data-processing-for-fast-depth-coding <https://github.com/PharrellWANG/data-processing-for-fdc>`_.
+Behaviours of the Project
+^^^^^^^^^^^^^^^^^^^^^^^^^
+For pre-processing the data, we need to go through the steps below:
 
-* License: `MIT License <https://choosealicense.com/licenses/mit/>`_.
+**step 1** Concatenate the data sets according to block sizes (e.g., According to block sizes, concat the data from difference sequences into four groups/csv_files, 64x64, 32x32, 16x16, 8x8)
+
+**step 2** Remove the commas at the end of each line for all the four csv_files.
+
+**step 3** Counting the total number of data samples, and use the counting results to divide the data into 3 sets. See the table below.
+
+   +-------------------------+-------------+
+   | **Training** data set   |     60%     |
+   +-------------------------+-------------+
+   | **Validation** data set |     20%     |
+   +-------------------------+-------------+
+   | **Testing** data set    |     20%     |
+   +-------------------------+-------------+
+
+.. note::
+
+        1. Those ratios are recommended by `Andrew Ng <http://www.andrewng.org/about/>`_. You'd be surprised to find out that 80/20 is quite a commonly occurring ratio, often referred to as the Pareto principle. It's usually a safe bet if you use that ratio.
+
+        2. To be fair, we will first find the class [from the 37 classes] which has the least data samples, secondly based on its amount of samples, we get the train-validation-test data sets for other classes such that all classes have the same amount of data for the deep learning.

@@ -96,7 +96,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#effort-from-ho">Effort from Ho</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#effort-from-me">Effort from me</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#modifications">Modifications</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#project">Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project">Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#about-the-project">About the Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#behaviours-of-the-project">Behaviours of the Project</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -217,22 +221,70 @@ facilitate the <em>model training process</em>.</p>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><strong>1-D Depth Data</strong> means the pixel value of the depth block being <strong>flattened</strong> into 1 dimension. For example, to store an M x N matrix of pixel values (you can imagine those pixels forming an image, hence it is like we are storing an image), the <strong>1-D Depth Data</strong> (pixel values) must contain M*N values, with M rows of N contiguous values each.  That is, the 1-D data must store the matrix as: <code class="docutils literal"><span class="pre">....</span> <span class="pre">row</span> <span class="pre">0</span> <span class="pre">....</span> <span class="pre">....</span> <span class="pre">row</span> <span class="pre">1</span> <span class="pre">....</span> <span class="pre">//</span> <span class="pre">...........</span>&#160; <span class="pre">//</span> <span class="pre">...</span> <span class="pre">row</span> <span class="pre">M-1</span> <span class="pre">....</span></code></p>
-</div>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">when collecting the data, I have made it to write 35 for mode 37, and 36 for mode 38. Hence a little time/energy is saved for the data processing.</p>
+<ol class="last arabic simple">
+<li><strong>1-D Depth Data</strong> means the pixel value of the depth block being <strong>flattened</strong> into 1 dimension. For example, to store an M x N matrix of pixel values (you can imagine those pixels forming an image, hence it is like we are storing an image), the <strong>1-D Depth Data</strong> (pixel values) must contain M*N values, with M rows of N contiguous values each.  That is, the 1-D data must store the matrix as: <code class="docutils literal"><span class="pre">....</span> <span class="pre">row</span> <span class="pre">0</span> <span class="pre">....</span> <span class="pre">....</span> <span class="pre">row</span> <span class="pre">1</span> <span class="pre">....</span> <span class="pre">//</span> <span class="pre">...........</span>&#160; <span class="pre">//</span> <span class="pre">...</span> <span class="pre">row</span> <span class="pre">M-1</span> <span class="pre">....</span></code></li>
+<li>when collecting the data, I have made it to write 35 for mode 37, and 36 for mode 38. Hence a little time/energy is saved for the data processing.</li>
+</ol>
 </div>
 </div>
 <div class="section" id="project">
 <h3>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="about-the-project">
+<h4>About the Project<a class="headerlink" href="#about-the-project" title="Permalink to this headline">¶</a></h4>
 <p>Based on the above ideas, I have created a project in Python for pre processing the data.</p>
 <p>Anyone can clone the codebase of the project from GitHub. You can view the codes after you obtained your copy.</p>
-<ul class="simple">
-<li>Project name: <strong>data-processing-for-fdc</strong></li>
-<li>GitHub Repository: <a class="reference external" href="https://github.com/PharrellWANG/data-processing-for-fdc">data-processing-for-fast-depth-coding</a>.</li>
-<li>License: <a class="reference external" href="https://choosealicense.com/licenses/mit/">MIT License</a>.</li>
-</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">2017-08-17</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">0.1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Pharrell.zx WANG</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Name:</th><td class="field-body"><strong>data-processing-for-fdc</strong></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">GitHub:</th><td class="field-body"><a class="reference external" href="https://github.com/PharrellWANG/data-processing-for-fdc">data-processing-for-fast-depth-coding</a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">License:</th><td class="field-body"><a class="reference external" href="https://choosealicense.com/licenses/mit/">MIT License</a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="behaviours-of-the-project">
+<h4>Behaviours of the Project<a class="headerlink" href="#behaviours-of-the-project" title="Permalink to this headline">¶</a></h4>
+<p>For pre-processing the data, we need to go through the steps below:</p>
+<p><strong>step 1</strong> Concatenate the data sets according to block sizes (e.g., According to block sizes, concat the data from difference sequences into four groups/csv_files, 64x64, 32x32, 16x16, 8x8)</p>
+<p><strong>step 2</strong> Remove the commas at the end of each line for all the four csv_files.</p>
+<p><strong>step 3</strong> Counting the total number of data samples, and use the counting results to divide the data into 3 sets. See the table below.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Training</strong> data set</td>
+<td>60%</td>
+</tr>
+<tr class="row-even"><td><strong>Validation</strong> data set</td>
+<td>20%</td>
+</tr>
+<tr class="row-odd"><td><strong>Testing</strong> data set</td>
+<td>20%</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Those ratios are recommended by <a class="reference external" href="http://www.andrewng.org/about/">Andrew Ng</a>. You’d be surprised to find out that 80/20 is quite a commonly occurring ratio, often referred to as the Pareto principle. It’s usually a safe bet if you use that ratio.</li>
+<li>To be fair, we will first find the class [from the 37 classes] which has the least data samples, secondly based on its amount of samples, we get the train-validation-test data sets for other classes such that all classes have the same amount of data for the deep learning.</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 </div>
