@@ -284,6 +284,7 @@ facilitate the <em>model training process</em>.</p>
 <li>To be fair, we will first find the class [from the 37 classes] which has the least data samples, secondly based on its amount of samples, we get the train-validation-test data sets for other classes such that all classes have the same amount of data for the deep learning.</li>
 </ol>
 </div>
+<p><strong>step 4</strong> Convert data to <strong>TFRecord</strong> format. (The recommended format for TensorFlow is a <a class="reference external" href="https://www.tensorflow.org/versions/r1.1/api_guides/python/python_io#tfrecords_format_details">TFRecord</a> file containing <a class="reference external" href="https://github.com/tensorflow/tensorflow/blob/r1.1/tensorflow/core/example/example.proto">tf.train.Example protocol buffers</a> (which contain Features as a field). )</p>
 </div>
 </div>
 </div>

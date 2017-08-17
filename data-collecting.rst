@@ -92,3 +92,5 @@ For pre-processing the data, we need to go through the steps below:
         1. Those ratios are recommended by `Andrew Ng <http://www.andrewng.org/about/>`_. You'd be surprised to find out that 80/20 is quite a commonly occurring ratio, often referred to as the Pareto principle. It's usually a safe bet if you use that ratio.
 
         2. To be fair, we will first find the class [from the 37 classes] which has the least data samples, secondly based on its amount of samples, we get the train-validation-test data sets for other classes such that all classes have the same amount of data for the deep learning.
+
+**step 4** Convert data to **TFRecord** format. (The recommended format for TensorFlow is a `TFRecord <https://www.tensorflow.org/versions/r1.1/api_guides/python/python_io#tfrecords_format_details>`_ file containing `tf.train.Example protocol buffers <https://github.com/tensorflow/tensorflow/blob/r1.1/tensorflow/core/example/example.proto>`_ (which contain Features as a field). )
