@@ -4,6 +4,16 @@ Data Collecting
 This document will show you how to collect the data for both training and
 testing the deep leaning model.
 
+Path of collected data
+----------------------
+``/Volumes/XssdPharrell/data_collecting/``
+
+.. figure:: ./images/data-path.png
+   :scale: 100 %
+   :alt: data path
+
+   A screen capture of the data path.
+
 .. _effort-from-ho:
 
 Effort from Ho
@@ -13,7 +23,10 @@ Effort from Ho
 
 
 Effort from me
---------------------
+--------------
+
+Modifications
+~~~~~~~~~~~~~
 Based on the :ref:`effort-from-ho`, I made some modifications to better
 facilitate the *model training process*.
 
@@ -37,13 +50,14 @@ When encoding the video sequences, for every block:
 
 .. attention:: when collecting the data, I have made it to write 35 for mode 37, and 36 for mode 38. Hence a little time/energy is saved for the data processing.
 
+Project
+~~~~~~~
+Based on the above ideas, I have created a project in Python for pre processing the data.
 
-Path of collected data
-----------------------
-``/Volumes/XssdPharrell/data_collecting/``
+Anyone can clone the codebase of the project from GitHub. You can view the codes after you obtained your copy.
 
-.. figure:: ./images/data-path.png
-   :scale: 100 %
-   :alt: data path
+* Project name: **data-processing-for-fdc**
 
-   A screen capture of the data path.
+* GitHub Repository: `data-processing-for-fast-depth-coding <https://github.com/PharrellWANG/data-processing-for-fdc>`_.
+
+* License: `MIT License <https://choosealicense.com/licenses/mit/>`_.
