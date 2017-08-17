@@ -31,13 +31,15 @@ Path of collected data
 
 Size of collected data
 ----------------------
-Size of collected data: 46.12 GB
+Size of collected data: 6.28 GB
 
 .. figure:: ./images/data-size.png
-   :scale: 100 %
+   :scale: 50 %
    :alt: data size
 
    A screen capture of the data size.
+
+In the picture above, the four folders only contain ``/data_exported`` folders. All the other files (including video sequences, codec binaries and scripts) are removed for showing *the size of the data*.
 
 
 .. _effort-from-ho:
