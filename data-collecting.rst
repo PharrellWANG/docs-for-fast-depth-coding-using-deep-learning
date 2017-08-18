@@ -140,3 +140,10 @@ See two pictures below for reference.
 .. note::
       1. In the two pictures above, the names of the project and file belong to the old project. Now for publishing the project I have restructured/reformatted some files.
       2. The two pictures above only serve for demonstrating the structure of the TFRecord before they are serialized to string.
+
+There's the other functionality of the project -- :ref:`data-visu`.
+
+.. _data-visu:
+
+Data Visualization
+~~~~~~~~~~~~~~~~~~

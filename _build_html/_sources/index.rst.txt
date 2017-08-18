@@ -20,7 +20,7 @@ This documentation is organized into a couple sections:
 .. _data-collecting:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Data Collecting
 
    data-collecting
