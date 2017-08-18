@@ -13,16 +13,8 @@ Other figures are **the visualization of some collected data**, since putting al
 
    .. glossary::
 
-   environment
-      A structure where information about all documents under the root is
-      saved, and used for cross-referencing.  The environment is pickled
-      after the parsing stage, so that successive runs only need to read
-      and parse new and changed documents.
-
-   source directory
-      The directory which, including its subdirectories, contains all
-      source files for one Sphinx project.
-
+   TOP-5
+      To compare models, we examine how often the model fails to predict the correct answer as one of their top 5 guesses -- termed "top-5 error rate".
 
 .. how to use term: ======>>> :term: asdf; asdfasd
 
@@ -128,3 +120,38 @@ Examples for block size 8x8
 
 Examples for block size 16x16
 -----------------------------
+
+.. figure:: ./images/size_16/size16_mode0.png
+   :scale: 100 %
+   :alt: size16_mode0
+   :align: center
+
+   Figure 2-0. Intra Mode: 0, Block Size: 16x16
+
+.. figure:: ./images/size_16/size16_mode1.png
+   :scale: 100 %
+   :alt: size16_mode1
+   :align: center
+
+   Figure 2-1. Intra Mode: 1, Block Size: 16x16
+
+.. figure:: ./images/size_16/size16_mode2.png
+   :scale: 100 %
+   :alt: size16_mode2
+   :align: center
+
+   Figure 2-2. Intra Mode: 2, Block Size: 16x16
+
+.. figure:: ./images/size_16/size16_mode3.png
+   :scale: 100 %
+   :alt: size16_mode3
+   :align: center
+
+   Figure 2-3. Intra Mode: 3, Block Size: 16x16
+
+.. figure:: ./images/size_16/size16_mode34.png
+   :scale: 100 %
+   :alt: size16_mode34
+   :align: center
+
+   Figure 2-34. Intra Mode: 34, Block Size: 16x16
