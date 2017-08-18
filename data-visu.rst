@@ -2,6 +2,22 @@
 
 Data Visualization
 ==================
+
+In the python project for pre-processing the data, which is `data-processing-for-fast-depth-coding <https://github.com/PharrellWANG/data-processing-for-fdc>`_, you can visualize the collected data by typing commands from terminal:
+
+.. code-block:: python
+
+   python data_visu/visualize_blocks.py --block_size=32 --mode=2
+
+
+.. _figure0-0:
+.. figure:: ./images/running_visu.png
+   :scale: 50 %
+   :alt: running visu
+   :align: center
+
+   Figure 0-0. running the visualization
+
 :ref:`figure0-1` and :ref:`figure0-2` are **the illustrations of Intra modes in HEVC** in case you want to refresh your memory. (DMMs are not illustrated here).
 
 Other figures are **the visualization of some collected data**.
