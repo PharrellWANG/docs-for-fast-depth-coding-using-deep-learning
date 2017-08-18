@@ -1,4 +1,4 @@
-Data Collecting
+Data Collection
 ===============
 
 This document will show you how to collect the data for *fast depth coding using deep learning*.
