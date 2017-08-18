@@ -176,3 +176,69 @@ Examples for block size 16x16
    :align: center
 
    Figure 2-34. Intra Mode: 34, Block Size: 16x16
+
+Examples for block size 32x32
+-----------------------------
+
+.. figure:: ./images/size_32/size32_mode0.png
+   :scale: 100 %
+   :alt: size32_mode0
+   :align: center
+
+   Figure 3-0. Intra Mode: 0, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode1.png
+   :scale: 100 %
+   :alt: size32_mode1
+   :align: center
+
+   Figure 3-1. Intra Mode: 1, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode2.png
+   :scale: 100 %
+   :alt: size32_mode2
+   :align: center
+
+   Figure 3-2. Intra Mode: 2, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode3.png
+   :scale: 100 %
+   :alt: size32_mode3
+   :align: center
+
+   Figure 3-3. Intra Mode: 3, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode30.png
+   :scale: 100 %
+   :alt: size32_mode30
+   :align: center
+
+   Figure 3-30. Intra Mode: 30, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode33.png
+   :scale: 100 %
+   :alt: size32_mode33
+   :align: center
+
+   Figure 3-33. Intra Mode: 33, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode34.png
+   :scale: 100 %
+   :alt: size32_mode34
+   :align: center
+
+   Figure 3-34. Intra Mode: 34, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode35.png
+   :scale: 100 %
+   :alt: size32_mode35
+   :align: center
+
+   Figure 3-35. Intra Mode: 35, Block Size: 32x32
+
+.. figure:: ./images/size_32/size32_mode36.png
+   :scale: 100 %
+   :alt: size32_mode36
+   :align: center
+
+   Figure 3-36. Intra Mode: 36, Block Size: 32x32
