@@ -24,6 +24,7 @@ This documentation is organized into a couple sections:
 
    data-collecting
    data-visu
+   data-distribution
 
 .. _model-training:
 
