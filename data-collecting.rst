@@ -142,8 +142,3 @@ See two pictures below for reference.
       2. The two pictures above only serve for demonstrating the structure of the TFRecord before they are serialized to string.
 
 There's the other functionality of the project -- :ref:`data-visu`.
-
-.. _data-visu:
-
-Data Visualization
-~~~~~~~~~~~~~~~~~~
