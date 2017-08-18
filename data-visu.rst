@@ -2,14 +2,14 @@
 
 Data Visualization
 ==================
-``Figure 0-1`` and ``Figure 0-2`` are **the illustrations of Intra modes in HEVC** in case you want to refresh your memory. (DMMs are not illustrated here).
+:ref:`figure0-1` and :ref:`figure0-2` are **the illustrations of Intra modes in HEVC** in case you want to refresh your memory. (DMMs are not illustrated here).
 
-Other figures are **the visualization of some collected data**, since putting all the visualization images here would be possibly overwhelming and unnecessary.
+Other figures are **the visualization of some collected data**.
 
-.. note::  But if you want to see all the visualization images, that is also doable, please just let me know :D
+.. note::  Posting all the visualization images here would be possibly overwhelming and unnecessary. However, if you want to see all the visualizations, that is also doable (by spending a *little* more time running the python script then capturing screen). Please just let me know if there's a need :D
 
 .. important::
-   Please compare ``Figure 2-2`` with ``Figure 2-34``. Compare the two blocks in red circle. You should be able to find the patterns are very similar to each other while their modes are totally different. This is the reason why we need to use TOP-5 accuracy instead of TOP-1 for evaluating the machine learning model.
+   Please compare :ref:`figure2-2` with :ref:`figure2-34`. Compare the two blocks in red circle. You should be able to find the patterns are very similar to each other while their modes are totally different. This is the reason why we need to use TOP-5 accuracy instead of TOP-1 for evaluating the machine learning model.
 
    .. glossary::
 
@@ -18,11 +18,13 @@ Other figures are **the visualization of some collected data**, since putting al
 
 .. how to use term: ======>>> :term: asdf; asdfasd
 
+.. tip:: Feel free to click on the figures for inspecting their features carefully by enlarging or downloading. They are licensed under `MIT License <https://choosealicense.com/licenses/mit/>`_.
 
 
 Intra modes in HEVC
 -------------------
 
+.. _figure0-1:
 .. figure:: ./images/mode_dirs.png
    :scale: 25 %
    :alt: size8_mode0
@@ -30,6 +32,7 @@ Intra modes in HEVC
 
    Figure 0-1. Illustration of Intra modes [0, 34]
 
+.. _figure0-2:
 .. figure:: ./images/mode_dirs_b.png
    :scale: 30 %
    :alt: size8_mode0
@@ -135,6 +138,7 @@ Examples for block size 16x16
 
    Figure 2-1. Intra Mode: 1, Block Size: 16x16
 
+.. _figure2-2:
 .. figure:: ./images/size_16/size16_mode2.png
    :scale: 100 %
    :alt: size16_mode2
@@ -149,6 +153,7 @@ Examples for block size 16x16
 
    Figure 2-3. Intra Mode: 3, Block Size: 16x16
 
+.. _figure2-34:
 .. figure:: ./images/size_16/size16_mode34.png
    :scale: 100 %
    :alt: size16_mode34

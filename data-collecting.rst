@@ -47,11 +47,17 @@ In the picture above, the four folders only contain ``/data_exported`` folders. 
 Effort from Ho
 --------------
 
-.. todo:: Add Ho's efforts here. Shall be done before the presentation.
+The pdf file created by Ho are provided for downloading.
+
+:download:`20170621 Fast Depth Coding Via TensorFlow (Data Collection) v1 <pdf_files/effort_ho.pdf>`
+
+In the PDF file, I made some drafting marks. Those marks might help you understanding my :ref:`dc-modifications`.
 
 
 Effort from me
 --------------
+
+.. _dc-modifications:
 
 Modifications
 ~~~~~~~~~~~~~
