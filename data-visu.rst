@@ -20,8 +20,8 @@ Other figures are **the visualization of some collected data**, since putting al
 
 
 
-Refresh Memory: Intra modes in HEVC
------------------------------------
+Intra modes in HEVC
+-------------------
 
 .. figure:: ./images/mode_dirs.png
    :scale: 25 %
