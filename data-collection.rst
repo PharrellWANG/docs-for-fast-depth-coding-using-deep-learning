@@ -70,7 +70,7 @@ When encoding the video sequences, for every block:
 
     - ``if`` HTM encoder decides to implement a partition for the block (where ``partition_number == 4`` (NXN)):
 
-        - ``uidepth += 1`` (add 1 to uidepth), let's **collect** data from the four sub-blocks using ``for`` loop (instead of collecting data from the block of size 2NX2N).
+        - SKIP it.
 
     - ``else if`` HTM encoder decides **not** to implement a partition:
 
