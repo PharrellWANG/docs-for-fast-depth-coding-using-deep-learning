@@ -5,6 +5,8 @@ This document will show you how to collect the data for *fast depth coding using
 
 Data Source
 -----------
+**We collect the data by encoding the video sequences.**
+
 Data are collected from four video sequences.
 
    +----+-------------------------+
@@ -51,9 +53,6 @@ The pdf file created by Ho are provided for downloading.
 
 :download:`20170621 Fast Depth Coding Via TensorFlow (Data Collection) v1 <pdf_files/effort_ho.pdf>`
 
-In the PDF file, I made some drafting marks. Those marks might help you understanding my :ref:`dc-modifications`.
-
-
 Effort from me
 --------------
 
@@ -63,8 +62,6 @@ Modifications
 ~~~~~~~~~~~~~
 Based on the :ref:`effort-from-ho`, I made some modifications to better
 facilitate the *model training process*.
-
-**We collect the data by encoding the video sequences.**
 
 When encoding the video sequences, for every block:
 
