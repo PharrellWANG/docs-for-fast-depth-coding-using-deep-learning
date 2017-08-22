@@ -22,7 +22,7 @@ This documentation is organized into a couple sections:
    :maxdepth: 3
    :caption: Data Processing
 
-   data-collecting
+   data-collection
    data-visu
    data-distribution
 
