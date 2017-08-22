@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Data Collecting &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
+  <title>Data Collection &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
   
 
   
@@ -36,7 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fast Depth Coding Using Deep Learning 0.1.0 documentation" href="index.html"/>
-        <link rel="prev" title="Welcome to Fast Depth Coding Using Deep Learning’s documentation!" href="index.html"/> 
+        <link rel="next" title="Data Visualization" href="data-visu.html"/>
+        <link rel="prev" title="Fast Depth Coding Using Deep Learning" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -89,10 +90,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">Data Collecting</span></p>
+              <p class="caption"><span class="caption-text">Data Processing</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Collecting</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Collection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-source">Data Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#path-of-collected-data">Path of collected data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#size-of-collected-data">Size of collected data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#effort-from-ho">Effort from Ho</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#effort-from-me">Effort from me</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#modifications">Modifications</a></li>
@@ -105,6 +108,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="data-visu.html">Data Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-distribution.html">Data Distribution</a></li>
 </ul>
 
             
@@ -149,7 +154,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Data Collecting</li>
+      <li>Data Collection</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -168,10 +173,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="data-collecting">
-<h1>Data Collecting<a class="headerlink" href="#data-collecting" title="Permalink to this headline">¶</a></h1>
-<p>This document will show you how to collect the data for both training and
-testing the deep leaning model.</p>
+  <div class="section" id="data-collection">
+<h1>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">¶</a></h1>
+<p>This document will show you how to collect the data for <em>fast depth coding using deep learning</em>.</p>
+<div class="section" id="data-source">
+<h2>Data Source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h2>
+<p><strong>We collect the data by encoding the video sequences.</strong></p>
+<p>Data are collected from four video sequences.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">#</th>
+<th class="head">name of the sequence</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>poznan_hall_1920x1088</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>poznan_street_1920x1088</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>shark_1920x1088</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>undo_dancer_1920x1088</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
 <div class="section" id="path-of-collected-data">
 <h2>Path of collected data<a class="headerlink" href="#path-of-collected-data" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">/Volumes/XssdPharrell/data_collecting/</span></code></p>
@@ -180,20 +216,26 @@ testing the deep leaning model.</p>
 <p class="caption"><span class="caption-text">A screen capture of the data path.</span></p>
 </div>
 </div>
+<div class="section" id="size-of-collected-data">
+<h2>Size of collected data<a class="headerlink" href="#size-of-collected-data" title="Permalink to this headline">¶</a></h2>
+<p>Size of collected data: 6.28 GB</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="_images/data-size.png"><img alt="data size" src="_images/data-size.png" style="width: 454.0px; height: 253.0px;" /></a>
+<p class="caption"><span class="caption-text">A screen capture of the data size.</span></p>
+</div>
+<p>In the picture above, the four folders only contain <code class="docutils literal"><span class="pre">/data_exported</span></code> folders. All the other files (including video sequences, codec binaries and scripts) are removed for showing <em>the size of the data</em>.</p>
+</div>
 <div class="section" id="effort-from-ho">
 <span id="id1"></span><h2>Effort from Ho<a class="headerlink" href="#effort-from-ho" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Add Ho’s efforts here. Shall be done before the presentation.</p>
-</div>
+<p>The pdf file created by Ho are provided for downloading.</p>
+<p><a class="reference download internal" href="_downloads/effort_ho.pdf" download=""><code class="xref download docutils literal"><span class="pre">20170621</span> <span class="pre">Fast</span> <span class="pre">Depth</span> <span class="pre">Coding</span> <span class="pre">Via</span> <span class="pre">TensorFlow</span> <span class="pre">(Data</span> <span class="pre">Collection)</span> <span class="pre">v1</span></code></a></p>
 </div>
 <div class="section" id="effort-from-me">
 <h2>Effort from me<a class="headerlink" href="#effort-from-me" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="modifications">
-<h3>Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h3>
+<span id="dc-modifications"></span><h3>Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h3>
 <p>Based on the <a class="reference internal" href="#effort-from-ho"><span class="std std-ref">Effort from Ho</span></a>, I made some modifications to better
 facilitate the <em>model training process</em>.</p>
-<p><strong>We collect the data by encoding the video sequences.</strong></p>
 <p>When encoding the video sequences, for every block:</p>
 <ul>
 <li><p class="first"><code class="docutils literal"><span class="pre">if</span></code> DIS has been assigned (where <code class="docutils literal"><span class="pre">DIS_FLAG</span> <span class="pre">==</span> <span class="pre">1</span></code>), we <strong>skip</strong> it (since none of the conventional intra modes including DMMs will be used). <em>Skip it</em> means we don’t collect data from it.</p>
@@ -284,6 +326,24 @@ facilitate the <em>model training process</em>.</p>
 <li>To be fair, we will first find the class [from the 37 classes] which has the least data samples, secondly based on its amount of samples, we get the train-validation-test data sets for other classes such that all classes have the same amount of data for the deep learning.</li>
 </ol>
 </div>
+<p><strong>step 4</strong> Convert data to <strong>TFRecord</strong> format. (The recommended format for TensorFlow is a <a class="reference external" href="https://www.tensorflow.org/versions/r1.1/api_guides/python/python_io#tfrecords_format_details">TFRecord</a> file containing <a class="reference external" href="https://github.com/tensorflow/tensorflow/blob/r1.1/tensorflow/core/example/example.proto">tf.train.Example protocol buffers</a> (which contain Features as a field). )</p>
+<p>See two pictures below for reference.</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="_images/tfrecord-1.png"><img alt="data size" src="_images/tfrecord-1.png" style="width: 579.0px; height: 471.0px;" /></a>
+<p class="caption"><span class="caption-text">A screen capture of our TFRecord 1</span></p>
+</div>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="_images/tfrecord-2.png"><img alt="data size" src="_images/tfrecord-2.png" style="width: 436.0px; height: 254.0px;" /></a>
+<p class="caption"><span class="caption-text">A screen capture of our TFRecord 2</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>In the two pictures above, the names of the project and file belong to the old project. Now for publishing the project I have restructured/reformatted some files.</li>
+<li>The two pictures above only serve for demonstrating the structure of the TFRecord before they are serialized to string.</li>
+</ol>
+</div>
+<p>There’s the other functionality of the project – <a class="reference internal" href="data-visu.html#data-visu"><span class="std std-ref">Data Visualization</span></a>.</p>
 </div>
 </div>
 </div>
@@ -299,8 +359,10 @@ facilitate the <em>model training process</em>.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="data-visu.html" class="btn btn-neutral float-right" title="Data Visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to Fast Depth Coding Using Deep Learning’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="index.html" class="btn btn-neutral" title="Fast Depth Coding Using Deep Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
