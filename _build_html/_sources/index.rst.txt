@@ -11,12 +11,12 @@ The details of the implementation are documented here for reference.
 
 This documentation is organized into a couple sections:
 
-* :ref:`data`
+* :ref:`data-processing`
 * :ref:`model-training`
 * :ref:`model-testing`
 * :ref:`codec-integration`
 
-.. _data:
+.. _data-processing:
 
 .. toctree::
    :maxdepth: 3
