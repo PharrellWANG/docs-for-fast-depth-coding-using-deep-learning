@@ -15,6 +15,7 @@ This documentation is organized into a couple sections:
 * :ref:`model-training`
 * :ref:`model-testing`
 * :ref:`codec-integration`
+* :ref:`quick-memo`
 
 .. _data-processing:
 
@@ -45,6 +46,14 @@ This documentation is organized into a couple sections:
 .. toctree::
    :maxdepth: 2
    :caption: HTM Codec Integration
+
+.. _quick-memo:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Quick Memo
+
+   quick-memo
 
 
 
