@@ -1,11 +1,13 @@
 Deep Learning
 =============
+Downloading codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
 
-All the models are trained from scratch.
+- All the models are trained from scratch.
+- Since the datasets for block size 32x32 and size 64x64 are too small, models are not trained for them. Instead, we consider using average down sampling to do the prediction for them using learned model for block size 16x16.
 
-Settings
-~~~~~~~~
-1. No padding, cropping, flipping applied. No data augmentation applied. The orignal data is distorted enough by nature. See :ref:`data-visu` section to get a taste.
+**Settings**
+
+1. No padding/cropping/flipping applied. No data augmentation applied. The orignal data is distorted enough by nature. See :ref:`data-visu` section to get a taste.
 2. Momentum optimizer 0.9.
 3. Learning rate schedule: 0.01 (<20k), 0.001 (<40k), 0.0001 (<60k), 0.00001 (else).
 4. Weight decay rate: 0.0002.
