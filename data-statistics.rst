@@ -142,32 +142,22 @@ The mode distribution data are provided for downloading.
 
 :download:`mode distribution of block size 64x64 AFTER smooth removing <txt_files/sm_64.txt>`
 
-Step 4 Tagging
---------------
 
-Tag the mode to start from 0, end with 31. Just use ``modeIdx - 2`` to obtain
-the new index of each mode for deep learning.
-
-The mode distribution data are provided for downloading.
-
-:download:`mode distribution of block size 04x04 AFTER tagging <txt_files/tagging_04.txt>`
-
-:download:`mode distribution of block size 08x08 AFTER tagging <txt_files/tagging_08.txt>`
-
-:download:`mode distribution of block size 16x16 AFTER tagging <txt_files/tagging_16.txt>`
-
-:download:`mode distribution of block size 32x32 AFTER tagging <txt_files/tagging_32.txt>`
-
-:download:`mode distribution of block size 64x64 AFTER tagging <txt_files/tagging_64.txt>`
-
-
-Step 5 Imbalanced Learning
+Step 4 Imbalanced Learning
 --------------------------
 
 Please notice we are facing a problem of **imbalanced learning** which means
 the data sizes of each class vary in a large scale. To tackle the issue: we
 use equal data sizes for each class, abandon the
 extra data.
+
+The mode distribution data are provided for downloading.
+
+Step 5 Tagging
+--------------
+
+Tag the mode to start from 0, end with 31. Just use ``modeIdx - 2`` to obtain
+the new index of each mode for deep learning.
 
 
 .. _final-data-description:
@@ -206,8 +196,8 @@ Final Data Description
    | 3  | val_16x16.csv     |15.6  MB    | 600*32    | validation|
    +----+-------------------+------------+-----------+-----------+
 
-Too few data for size 32x32 and 64x64 after smooth removing.
+1. After trying to train data of size 04x04, it does not learn well, only top-28 accuracy is around 0.95.
 
-Maybe I should consider try the data before smooth removing for 32x32 and 64x64.
+2. Too few data for size 32x32 and 64x64 after smooth removing.
 
-Or just use average down-sampling for them.
+.. note:: Maybe I should consider try the data before smooth removing for 32x32 and 64x64. Or just use average down-sampling for them.
