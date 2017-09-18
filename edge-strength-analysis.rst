@@ -82,9 +82,7 @@ We can think like this: can we define the sharpness of the edges?
 Yes. We can.
 
 Strongly encouraging the readers to check the python codes provided for
-downloading below for understanding the algorithm here. The pseudo code
-description lacks comprehension quality due to limited time possessed by
-document author.
+downloading below for understanding the algorithm here.
 
 Edge analysis algorithm implemented in python is provided for downloading.
 
