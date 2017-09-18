@@ -87,7 +87,7 @@ The mode distribution data are provided for downloading.
 :download:`mode distribution of block size 64x64 AFTER non-angular removing <txt_files/non_ang_removed_size_64.txt>`
 
 
-Perform **edge strength analysis** for each block sample of all sizes. Observing the histogram distribution.
+Perform :ref:`edge-strength-analysis` for each block sample of all sizes. Observing the histogram distribution.
 
 Flat regions will trap CNN into ill condition. I decided to remove the regions where the edge strength is under 50.
 

@@ -28,6 +28,7 @@ This documentation is organized into a couple sections:
    data-statistics
    data-visu
    data-distribution
+   edge-strength-analysis
 
 .. _model-training:
 
