@@ -12,11 +12,20 @@ for reference. (We are targeting **3D-HEVC**.)
 
 This documentation is organized into a couple sections:
 
+* :ref:`proposed-algorithm`
 * :ref:`data-processing`
 * :ref:`model-training`
 * :ref:`model-testing`
 * :ref:`codec-integration`
 * :ref:`quick-memo`
+
+.. _proposed-algorithm:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Proposed Algorithm
+
+   proposed-algorithm
 
 .. _data-processing:
 
@@ -34,6 +43,8 @@ This documentation is organized into a couple sections:
 .. toctree::
    :maxdepth: 2
    :caption: Model Training
+
+   training
 
 
 .. _model-testing:
