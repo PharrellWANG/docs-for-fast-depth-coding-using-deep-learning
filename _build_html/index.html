@@ -92,9 +92,8 @@
               <p class="caption"><span class="caption-text">Data Processing</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="data-collection.html">Data Collection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Data Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visu.html">Data Visualization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-distribution.html">Data Distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edge-strength-analysis.html">Edge Strength Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quick Memo</span></p>
@@ -167,7 +166,7 @@
 <h1>Fast Intra Coding for both texture and depth Using Deep Learning<a class="headerlink" href="#fast-intra-coding-for-both-texture-and-depth-using-deep-learning" title="Permalink to this headline">¶</a></h1>
 <p><strong>Fast Intra Coding for both texture and depth Using Deep Learning</strong> is
 the thesis topic. The details of the implementation are documented here
-for reference.</p>
+for reference. (We are targeting <strong>3D-HEVC</strong>.)</p>
 <p>This documentation is organized into a couple sections:</p>
 <ul class="simple">
 <li><a class="reference internal" href="#data-processing"><span class="std std-ref">Data Processing</span></a></li>
@@ -185,7 +184,15 @@ for reference.</p>
 <li class="toctree-l2"><a class="reference internal" href="data-collection.html#effort-from-ho">Effort from Ho</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Data Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-1-merging">Step 1 Merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-2-removing-some-modes">Step 2 Removing some modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-3-removing-smooth-blocks">Step 3 Removing Smooth Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-4-tagging">Step 4 Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-5-imbalanced-learning">Step 5 Imbalanced Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#final-data-description">Final Data Description</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="data-visu.html">Data Visualization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="data-visu.html#intra-modes-in-hevc">Intra modes in HEVC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data-visu.html#examples-for-block-size-8x8">Examples for block size 8x8</a></li>
@@ -194,34 +201,13 @@ for reference.</p>
 <li class="toctree-l2"><a class="reference internal" href="data-visu.html#examples-for-block-size-64x64">Examples for block size 64x64</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data-distribution.html">Data Distribution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data-distribution.html#block-size-8-x-8">Block Size 8 x 8</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#unsorted-list">unsorted list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#sorted-list">sorted list</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="data-distribution.html#block-size-16-x-16">Block Size 16 x 16</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#id1">unsorted list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#id2">sorted list</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="data-distribution.html#block-size-32-x-32">Block Size 32 x 32</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#id3">unsorted list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#id4">sorted list</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="data-distribution.html#block-size-64x64">Block Size 64x64</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#id5">unsorted list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data-distribution.html#id6">sorted list</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="edge-strength-analysis.html">Edge Strength Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="edge-strength-analysis.html#motivation">Motivation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="edge-strength-analysis.html#my-experience-on-training-model-for-intra-mode-classification">My Experience on training model for intra mode classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edge-strength-analysis.html#motivation-originated-from-experience">Motivation originated from experience</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="edge-strength-analysis.html#confusion-matrix-obtained-during-training-process">Confusion matrix obtained during training process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edge-strength-analysis.html#statistics">Statistics</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="edge-strength-analysis.html#algorithm-designed-for-edge-analysis">Algorithm designed for edge analysis</a></li>
 </ul>
 </li>
 </ul>

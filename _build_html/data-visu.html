@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fast Intra Coding for both texture and depth Using Deep Learning 0.1.0 documentation" href="index.html"/>
-        <link rel="next" title="Data Distribution" href="data-distribution.html"/>
-        <link rel="prev" title="Data Statistics" href="data-statistics.html"/> 
+        <link rel="next" title="Edge Strength Analysis" href="edge-strength-analysis.html"/>
+        <link rel="prev" title="Processing Steps and Statistics" href="data-statistics.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -93,7 +93,7 @@
               <p class="caption"><span class="caption-text">Data Processing</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="data-collection.html">Data Collection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Data Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Visualization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#intra-modes-in-hevc">Intra modes in HEVC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples-for-block-size-8x8">Examples for block size 8x8</a></li>
@@ -102,7 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#examples-for-block-size-64x64">Examples for block size 64x64</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data-distribution.html">Data Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edge-strength-analysis.html">Edge Strength Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quick Memo</span></p>
 <ul>
@@ -172,6 +172,14 @@
             
   <div class="section" id="data-visualization">
 <span id="data-visu"></span><h1>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please notice this visualization is for the data without any
+pre-processing, i.e., the data that we obtained right after encoding the
+video sequences. You can get a sense of what kind of data that we are
+dealing with. And you might know the reason for the techniques executed in
+the pre-processing steps, such as edge strength analysis for smooth-removing.</p>
+</div>
 <p>In the python project for pre-processing the data, which is <a class="reference external" href="https://github.com/PharrellWANG/data-processing-for-fdc">data-processing-for-fast-depth-coding</a>, you can visualize the collected data by typing commands from terminal:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">data_visu</span><span class="o">/</span><span class="n">visualize_blocks</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">block_size</span><span class="o">=</span><span class="mi">32</span> <span class="o">--</span><span class="n">mode</span><span class="o">=</span><span class="mi">2</span>
 </pre></div>
@@ -371,10 +379,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="data-distribution.html" class="btn btn-neutral float-right" title="Data Distribution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="edge-strength-analysis.html" class="btn btn-neutral float-right" title="Edge Strength Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="data-statistics.html" class="btn btn-neutral" title="Data Statistics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="data-statistics.html" class="btn btn-neutral" title="Processing Steps and Statistics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

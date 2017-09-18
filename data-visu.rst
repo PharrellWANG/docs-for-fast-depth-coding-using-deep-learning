@@ -3,6 +3,12 @@
 Data Visualization
 ==================
 
+.. note:: Please notice this visualization is for the data without any
+         pre-processing, i.e., the data that we obtained right after encoding the
+         video sequences. You can get a sense of what kind of data that we are
+         dealing with. And you might know the reason for the techniques executed in
+         the pre-processing steps, such as edge strength analysis for smooth-removing.
+
 In the python project for pre-processing the data, which is `data-processing-for-fast-depth-coding <https://github.com/PharrellWANG/data-processing-for-fdc>`_, you can visualize the collected data by typing commands from terminal:
 
 .. code-block:: python

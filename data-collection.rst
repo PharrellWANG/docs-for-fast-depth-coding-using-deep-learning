@@ -3,6 +3,12 @@ Data Collection
 
 This document will show you how to collect the data for *fast depth coding using deep learning*.
 
+.. note::
+        Please notice here we elaborated the training data collecting process.
+        The testing/validating data are collected using the same methodology but
+        omitted here for clarity. For the details of the testing/validating data,
+        please check out :ref:`final-data-description`.
+
 Training Data Source
 --------------------
 **We collect the data by encoding the video sequences.**
