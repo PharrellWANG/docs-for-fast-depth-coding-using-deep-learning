@@ -24,14 +24,14 @@ Devices
 
     Devices for this project
 
-Data Processing
-^^^^^^^^^^^^^^^
+Device for Data Processing
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 - **iMac (21.5-inch 2017)**
 - Processor 3GHz Intel Core i5
 - Memory 8GB 2400 MHz DDR4
 
-Training
-^^^^^^^^
+Device for Training Models
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 - **Macbook Pro (15-inch, Mid 2015)**
 - Processor 2.2GHz Intel Core i7
 - Memory 16GB 1600MHz DDR3
