@@ -51,7 +51,9 @@ This documentation is organized into a couple sections:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Model Testing
+   :caption: Model Evaluating
+
+   test-model-16
 
 
 .. _codec-integration:

@@ -14,12 +14,20 @@ Downloading codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
 5. Batch size 128.
 6. Filters [16, 16, 32, 64], residual units for last three layers: 5
 
+.. note::
+        1. Block size 4x4 is for **PU**, while the smallest size of **CU** is 8x8.
+        2. From below training results, our model is not so applicable to blocks of size 4x4.
+        3. DMM is not applied for size 64x64.
+
+        Our **deep learning** strategy is targeted to **CU** from **size 8x8** to **size 64x64**,
+        both *texture* and *depth*.
+
 Training for block size 4x4
 ---------------------------
 
 Results
 ~~~~~~~
-The model cannot learn well for size 4x4, only top-28 is fine.
+The model **cannot** learn well for size 4x4, only top-28 is fine.
 
 .. figure:: images/blk-4--top-20.png
    :width: 720px
@@ -40,11 +48,38 @@ Training for block size 8x8
 
 Results
 ~~~~~~~
-The model indeed can learn something for size 8x8. Top 16 is fine, which can
+The model indeed **can** learn something for size 8x8. Top 16 is fine, which can
 reduce the angular modes by half.
 
 .. figure:: images/blk-8--top-16.png
    :width: 720px
    :alt: top 16 accuracy for block size 08x08
 
-   Figure 2.1 Top 16 Accuracy
+   Figure 2.1 Top 16 Accuracy for block size 08x08
+
+
+Training for block size 16x16
+-----------------------------
+
+Results
+~~~~~~~
+The model indeed **can** learn something for size 16x16. Top 16 is fine, which can
+reduce the angular modes by half.
+
+.. figure:: images/blk-16--top-16.png
+   :width: 720px
+   :alt: top 16 accuracy for block size 16x16
+
+   Figure 2.1 Top 16 Accuracy for block size 16x16
+
+Training for block size 32x32
+-----------------------------
+Dataset obtained after pre-processing is too small for using deep learning
+to train a model. Considering to use average down sampling to employ model
+trained for size 16x16.
+
+Training for block size 64x64
+-----------------------------
+Dataset obtained after pre-processing is too small for using deep learning
+to train a model. Considering to use average down sampling to employ model
+trained for size 16x16.
