@@ -29,7 +29,6 @@ Data Processing
 - **iMac (21.5-inch 2017)**
 - Processor 3GHz Intel Core i5
 - Memory 8GB 2400 MHz DDR4
-- Graphics Radeon Pro 555 2048MB (useless for Tensorflow)
 
 Training
 ^^^^^^^^
