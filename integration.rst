@@ -35,7 +35,7 @@ Training
 - **Macbook Pro (15-inch, Mid 2015)**
 - Processor 2.2GHz Intel Core i7
 - Memory 16GB 1600MHz DDR3
-- External GPU Nvidia GTX980, Memory 4GB
+- Nvidia GTX980, Memory 4GB (External GPU)
 
 
 Pre-requisites
