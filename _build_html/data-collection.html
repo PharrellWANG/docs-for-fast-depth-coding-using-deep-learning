@@ -37,7 +37,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fast Intra Coding for both texture and depth Using Deep Learning 0.1.0 documentation" href="index.html"/>
         <link rel="next" title="Processing Steps and Statistics" href="data-statistics.html"/>
-        <link rel="prev" title="Fast Intra Coding for both texture and depth Using Deep Learning" href="index.html"/> 
+        <link rel="prev" title="Proposed Algorithm" href="proposed-algorithm.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -90,7 +90,11 @@
               
             
             
-              <p class="caption"><span class="caption-text">Data Processing</span></p>
+              <p class="caption"><span class="caption-text">Proposed Algorithm</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Proposed Algorithm</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Processing</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Collection</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#training-data-source">Training Data Source</a></li>
@@ -101,6 +105,19 @@
 <li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visu.html">Data Visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edge-strength-analysis.html">Edge Strength Analysis</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Model Training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Deep Learning</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Model Evaluating</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from size 08x08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from size 16x16</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTM Codec Integration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">HTM Codec Integration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quick Memo</span></p>
 <ul>
@@ -171,13 +188,6 @@
   <div class="section" id="data-collection">
 <h1>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">¶</a></h1>
 <p>This document will show you how to collect the data for <em>fast depth coding using deep learning</em>.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Please notice here we elaborated the training data collecting process.
-The testing/validating data are collected using the same methodology but
-omitted here for clarity. For the details of the testing/validating data,
-please check out <a class="reference internal" href="data-statistics.html#final-data-description"><span class="std std-ref">Final Data Description</span></a>.</p>
-</div>
 <div class="section" id="training-data-source">
 <h2>Training Data Source<a class="headerlink" href="#training-data-source" title="Permalink to this headline">¶</a></h2>
 <p><strong>We collect the data by encoding the video sequences.</strong></p>
@@ -185,11 +195,11 @@ please check out <a class="reference internal" href="data-statistics.html#final-
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
-<col width="7%" />
-<col width="42%" />
-<col width="20%" />
+<col width="6%" />
+<col width="38%" />
 <col width="18%" />
-<col width="13%" />
+<col width="26%" />
+<col width="12%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">#</th>
@@ -203,25 +213,25 @@ please check out <a class="reference internal" href="data-statistics.html#final-
 <tr class="row-even"><td>1</td>
 <td>Balloons</td>
 <td>1024x768</td>
-<td>train</td>
+<td>train/test/eval</td>
 <td>300</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>kendo</td>
 <td>1024x768</td>
-<td>train</td>
+<td>train/test/eval</td>
 <td>300</td>
 </tr>
 <tr class="row-even"><td>3</td>
 <td>poznan_street</td>
 <td>1920x1088</td>
-<td>train</td>
+<td>train/test/eval</td>
 <td>250</td>
 </tr>
 <tr class="row-odd"><td>4</td>
 <td>undo_dancer</td>
 <td>1920x1088</td>
-<td>train</td>
+<td>train/test/eval</td>
 <td>250</td>
 </tr>
 </tbody>
@@ -284,7 +294,7 @@ please check out <a class="reference internal" href="data-statistics.html#final-
         <a href="data-statistics.html" class="btn btn-neutral float-right" title="Processing Steps and Statistics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Fast Intra Coding for both texture and depth Using Deep Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="proposed-algorithm.html" class="btn btn-neutral" title="Proposed Algorithm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
