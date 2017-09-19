@@ -53,7 +53,8 @@ This documentation is organized into a couple sections:
    :maxdepth: 2
    :caption: Model Evaluating
 
-   test-model-16
+   eval-model-08
+   eval-model-16
 
 
 .. _codec-integration:

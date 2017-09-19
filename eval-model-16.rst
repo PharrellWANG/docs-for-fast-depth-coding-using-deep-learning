@@ -1,5 +1,10 @@
-Model trained for size 16x16
-============================
+Model trained from size 16x16
+=============================
+
+.. note:: This model is trained using the data of size 16x16. But the
+            evaluation results clearly proved: this model is applicable to
+            size 32x32 and size 64x64 by using Bilinear Interpolation to do
+            resizing for the larger blocks.
 
 **Statistics**
 
