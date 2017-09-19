@@ -63,6 +63,8 @@ This documentation is organized into a couple sections:
    :maxdepth: 2
    :caption: HTM Codec Integration
 
+   integration
+
 .. _quick-memo:
 
 .. toctree::
