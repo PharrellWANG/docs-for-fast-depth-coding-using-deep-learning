@@ -53,8 +53,8 @@ Statistics
 After visualizing the angular modes, the blocks with very weak edges
 for each mode are frequently observed. They looks like the planar or DC mode.
 
-I've tried to train them with the weak edges blocks kept. But results
-are not good.
+I've tried to train the model while the blocks with weak edges are kept in
+the training data. Results are not good.
 
 Then it is natural to come to the conclusion that it is not good to mix smooth block with
 angular blocks for classification under the confidence that our neural net is
