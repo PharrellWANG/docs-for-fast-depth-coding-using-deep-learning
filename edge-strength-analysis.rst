@@ -65,7 +65,7 @@ in the paper of **wide residul network** are verified clearly.)
 The conclusion ``smooth regions will trap CNN in ill condition`` is also
 found in the journal paper below:
 
-:download:`CU Partition Mode Decision for HEVC Hardwired Intra Encoder Using CNN<papers/[Journal]CU Partition Mode Decision for HEVC Hardwired Intra Encoder Using CNN.pdf>`
+:download:`CU Partition Mode Decision for HEVC Hardwired Intra Encoder Using CNN <papers/[Journal]CU Partition Mode Decision for HEVC Hardwired Intra Encoder Using CNN.pdf>`
 
 So we decided to remove the smooth regions.
 
