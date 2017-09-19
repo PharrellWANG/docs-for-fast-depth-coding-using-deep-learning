@@ -79,22 +79,13 @@ Well, see below for the answer.
 Algorithm designed for edge analysis
 ------------------------------------
 
-We can think like this: can we define the sharpness of the edges?
+For answering the question of ``How to define the smooth regions``,
+we can think like this: can we define the sharpness of the edges?
 
 Yes. We can.
 
-Strongly encouraging the readers to check the python codes provided below for
-downloading to understand the algorithm used by us. (The python codes for
-the algorithm is easy to understand!)
-
-Edge analysis algorithm implemented in python is provided for downloading.
-
-:download:`Edge Analysis in Python<snippets/edge_strength_analysis.py>`
-
-
-See below code snippets for a quick sense.
-
-This is how we define the edge strength:
+See below code snippets for a quick understanding of how we define
+the edge strength:
 
 .. code-block:: python
 
@@ -147,3 +138,12 @@ Then calculate top (width*2 && non-zero) average.
 
             # add ave of the blocks grouping by each mode.
             # calculate the ave by dividing the number of blocks of each mode
+
+
+We encouraging the readers to check the python codes provided below for
+downloading to understand the algorithm used by us. (The python codes for
+the algorithm is easy to understand!)
+
+Edge analysis algorithm implemented in python is provided for downloading.
+
+:download:`Edge Analysis in Python<snippets/edge_strength_analysis.py>`
