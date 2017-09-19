@@ -1,6 +1,6 @@
 Deep Learning
 =============
-Downloading codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
+Download codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
 
 - All the models are trained from scratch.
 - Since the datasets for block size 32x32 and size 64x64 are too small, models are not trained for them. Instead, we use Bilinear Interpolation to resize the block to do the prediction for them using learned model for block size 16x16.

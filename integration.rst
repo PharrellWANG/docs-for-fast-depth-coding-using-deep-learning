@@ -4,7 +4,7 @@ HTM Codec Integration
 Run the inference in C++
 ------------------------
 
-Downloading the codebase from GitHub: https://github.com/PharrellWANG/Run-Inference-in-Cpp
+Download the codebase from GitHub: https://github.com/PharrellWANG/Run-Inference-in-Cpp
 
 - Newest stable version of Tensorflow: 1.3
 
