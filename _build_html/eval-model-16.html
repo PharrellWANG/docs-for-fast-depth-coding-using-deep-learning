@@ -1,0 +1,723 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Model trained from size 16x16 &mdash; Fast Intra Coding for both texture and depth Using Deep Learning 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Fast Intra Coding for both texture and depth Using Deep Learning 0.1.0 documentation" href="index.html"/>
+        <link rel="next" title="HTM Codec Integration" href="integration.html"/>
+        <link rel="prev" title="Model trained from size 08x08" href="eval-model-08.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Fast Intra Coding for both texture and depth Using Deep Learning
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Proposed Algorithm</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Proposed Algorithm</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Processing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-collection.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visu.html">Data Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edge-strength-analysis.html">Edge Strength Analysis</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Model Training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Deep Learning</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Model Evaluating</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from size 08x08</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model trained from size 16x16</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-blocks-of-size-16x16">Using blocks of size 16x16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#model-performance-on-validating-dataset">Model Performance on Validating Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model-performance-on-testing-dataset">Model Performance on Testing Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-blocks-of-size-32x32">Using blocks of size 32x32</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#performance-with-bilinear-interpolation">Performance with Bilinear Interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-with-nearest-neighbor-interpolation">Performance with Nearest Neighbor Interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-with-bicubic-interpolation">Performance with Bicubic Interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-with-area-interpolation">Performance with Area Interpolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-blocks-of-size-64x64">Using blocks of size 64x64</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Performance with Bilinear Interpolation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">HTM Codec Integration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">HTM Codec Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Quick Memo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-memo.html">Quick Memo</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fast Intra Coding for both texture and depth Using Deep Learning</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Model trained from size 16x16</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/eval-model-16.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-trained-from-size-16x16">
+<h1>Model trained from size 16x16<a class="headerlink" href="#model-trained-from-size-16x16" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This model is trained using the data of size 16x16. But the
+evaluation results clearly proved: this model is applicable to
+size 32x32 and size 64x64 by using Bilinear Interpolation to do
+resizing for the larger blocks.</p>
+</div>
+<p><strong>Statistics</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="54%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>1</td>
+<td>global step</td>
+<td>304857</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>batch size</td>
+<td>128</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>samples each class</td>
+<td>3075</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>number of classes</td>
+<td>32</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>training time</td>
+<td>11h 47m 50s</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>epoch</td>
+<td>396</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Epoch calculating</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">304857</span><span class="o">*</span><span class="mi">128</span><span class="o">/</span><span class="mi">3075</span><span class="o">/</span><span class="mf">32.0</span>
+<span class="go">396.53125</span>
+</pre></div>
+</div>
+<div class="section" id="using-blocks-of-size-16x16">
+<h2>Using blocks of size 16x16<a class="headerlink" href="#using-blocks-of-size-16x16" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="model-performance-on-validating-dataset">
+<h3>Model Performance on Validating Dataset<a class="headerlink" href="#model-performance-on-validating-dataset" title="Permalink to this headline">¶</a></h3>
+<p>Evaluation batch size 100, number of batches 192.</p>
+<p>Using validating dataset, the details are documented below:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="47%" />
+<col width="42%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0.1</td>
+<td>Name of dataset</td>
+<td>val_16x16.csv</td>
+</tr>
+<tr class="row-even"><td>0.2</td>
+<td>Size of dataset</td>
+<td>15.6 MB</td>
+</tr>
+<tr class="row-odd"><td>0.3</td>
+<td>Samples</td>
+<td>600*32</td>
+</tr>
+<tr class="row-even"><td>0.4</td>
+<td>Usage of dataset</td>
+<td>validation</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>top  5 accuracy</td>
+<td>0.801</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>top  6 accuracy</td>
+<td>0.842</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>top  7 accuracy</td>
+<td>0.873</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>top  8 accuracy</td>
+<td>0.895</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>top  9 accuracy</td>
+<td>0.912</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>top 10 accuracy</td>
+<td>0.924</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>top 11 accuracy</td>
+<td>0.934</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>top 12 accuracy</td>
+<td>0.942</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>top 16 accuracy</td>
+<td>0.965</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>top 17 accuracy</td>
+<td>0.970</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>top 18 accuracy</td>
+<td>0.974</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>top 19 accuracy</td>
+<td>0.977</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>top 20 accuracy</td>
+<td>0.980</td>
+</tr>
+<tr class="row-even"><td>14</td>
+<td>top 28 accuracy</td>
+<td>0.995</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="model-performance-on-testing-dataset">
+<h3>Model Performance on Testing Dataset<a class="headerlink" href="#model-performance-on-testing-dataset" title="Permalink to this headline">¶</a></h3>
+<p>Evaluation batch size 100, number of batches 192.</p>
+<p>Using testing dataset, the details are documented below:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="47%" />
+<col width="42%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0.1</td>
+<td>Name of dataset</td>
+<td>test_16x16.csv</td>
+</tr>
+<tr class="row-even"><td>0.2</td>
+<td>Size of dataset</td>
+<td>15.9 MB</td>
+</tr>
+<tr class="row-odd"><td>0.3</td>
+<td>Samples</td>
+<td>600*32</td>
+</tr>
+<tr class="row-even"><td>0.4</td>
+<td>Usage of dataset</td>
+<td>test</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>top  5 accuracy</td>
+<td>0.739</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>top  6 accuracy</td>
+<td>0.794</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>top  7 accuracy</td>
+<td>0.829</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>top  8 accuracy</td>
+<td>0.859</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>top  9 accuracy</td>
+<td>0.877</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>top 10 accuracy</td>
+<td>0.894</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>top 11 accuracy</td>
+<td>0.911</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>top 12 accuracy</td>
+<td>0.924</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>top 16 accuracy</td>
+<td>0.958</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>top 17 accuracy</td>
+<td>0.963</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>top 18 accuracy</td>
+<td>0.970</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>top 19 accuracy</td>
+<td>0.974</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>top 20 accuracy</td>
+<td>0.977</td>
+</tr>
+<tr class="row-even"><td>14</td>
+<td>top 28 accuracy</td>
+<td>0.995</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="using-blocks-of-size-32x32">
+<h2>Using blocks of size 32x32<a class="headerlink" href="#using-blocks-of-size-32x32" title="Permalink to this headline">¶</a></h2>
+<p>We have tried four resizing method:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Bilinear_interpolation">Bilinear interpolation</a>.</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation">Nearest neighbor interpolation</a>.</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Bicubic_interpolation">Bicubic interpolation</a>.</li>
+<li>Area interpolation.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All the data for size 32x32 after pre-processing are used for
+evaluation. We just named it as <code class="docutils literal"><span class="pre">val_32x32.csv</span></code>,
+no need for anther <code class="docutils literal"><span class="pre">test_32x32.csv</span></code>.</p>
+</div>
+<p>Evaluation batch size 100, number of batches 192.</p>
+<div class="section" id="performance-with-bilinear-interpolation">
+<h3>Performance with Bilinear Interpolation<a class="headerlink" href="#performance-with-bilinear-interpolation" title="Permalink to this headline">¶</a></h3>
+<p>Using validating dataset, with Bilinear interpolation,
+the details are documented below:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="47%" />
+<col width="42%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0.1</td>
+<td>Name of dataset</td>
+<td>val_32x32.csv</td>
+</tr>
+<tr class="row-even"><td>0.2</td>
+<td>Size of dataset</td>
+<td>104.9 MB</td>
+</tr>
+<tr class="row-odd"><td>0.3</td>
+<td>Samples</td>
+<td>872*32</td>
+</tr>
+<tr class="row-even"><td>0.4</td>
+<td>Usage of dataset</td>
+<td>validate&amp;test</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>top  5 accuracy</td>
+<td>0.812</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>top  6 accuracy</td>
+<td>0.855</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>top  7 accuracy</td>
+<td>0.887</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>top  8 accuracy</td>
+<td>0.908</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>top  9 accuracy</td>
+<td>0.924</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>top 10 accuracy</td>
+<td>0.936</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>top 11 accuracy</td>
+<td>0.946</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>top 12 accuracy</td>
+<td>0.954</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>top 16 accuracy</td>
+<td>0.972</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>top 17 accuracy</td>
+<td>0.976</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>top 18 accuracy</td>
+<td>0.979</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>top 19 accuracy</td>
+<td>0.982</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>top 20 accuracy</td>
+<td>0.984</td>
+</tr>
+<tr class="row-even"><td>14</td>
+<td>top 28 accuracy</td>
+<td>0.996</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="performance-with-nearest-neighbor-interpolation">
+<h3>Performance with Nearest Neighbor Interpolation<a class="headerlink" href="#performance-with-nearest-neighbor-interpolation" title="Permalink to this headline">¶</a></h3>
+<p>Almost the same performance as using Linear Interpolation!
+Omitted here for clarity.</p>
+</div>
+<div class="section" id="performance-with-bicubic-interpolation">
+<h3>Performance with Bicubic Interpolation<a class="headerlink" href="#performance-with-bicubic-interpolation" title="Permalink to this headline">¶</a></h3>
+<p>Almost the same performance as using Linear Interpolation!
+Omitted here for clarity.</p>
+</div>
+<div class="section" id="performance-with-area-interpolation">
+<h3>Performance with Area Interpolation<a class="headerlink" href="#performance-with-area-interpolation" title="Permalink to this headline">¶</a></h3>
+<p>Almost the same performance as using Linear Interpolation!
+Omitted here for clarity.</p>
+</div>
+</div>
+<div class="section" id="using-blocks-of-size-64x64">
+<h2>Using blocks of size 64x64<a class="headerlink" href="#using-blocks-of-size-64x64" title="Permalink to this headline">¶</a></h2>
+<p>Based on the observations of the testing results of block size 32x32, we believe there should not be such differences among different interpolation method.</p>
+<p>Here we only use <strong>Bilinear Interpolation</strong>.</p>
+<div class="section" id="id1">
+<h3>Performance with Bilinear Interpolation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Using validating dataset, with Bilinear interpolation,
+the details are documented below:</p>
+<p>Total samples: 1728</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">54</span><span class="o">*</span><span class="mi">32</span>
+<span class="go">1728</span>
+</pre></div>
+</div>
+<p>Evaluation batch size 100, number of batches 17.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="47%" />
+<col width="42%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0.1</td>
+<td>Name of dataset</td>
+<td>val_64x64.csv</td>
+</tr>
+<tr class="row-even"><td>0.2</td>
+<td>Size of dataset</td>
+<td>24.5 MB</td>
+</tr>
+<tr class="row-odd"><td>0.3</td>
+<td>Samples</td>
+<td>54*32</td>
+</tr>
+<tr class="row-even"><td>0.4</td>
+<td>Usage of dataset</td>
+<td>validate&amp;test</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>top  5 accuracy</td>
+<td>0.764</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>top  6 accuracy</td>
+<td>0.821</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>top  7 accuracy</td>
+<td>0.868</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>top  8 accuracy</td>
+<td>0.892</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>top  9 accuracy</td>
+<td>0.916</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>top 10 accuracy</td>
+<td>0.932</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>top 11 accuracy</td>
+<td>0.946</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>top 12 accuracy</td>
+<td>0.956</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>top 16 accuracy</td>
+<td>0.973</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>top 17 accuracy</td>
+<td>0.979</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>top 18 accuracy</td>
+<td>0.982</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>top 19 accuracy</td>
+<td>0.984</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>top 20 accuracy</td>
+<td>0.987</td>
+</tr>
+<tr class="row-even"><td>14</td>
+<td>top 28 accuracy</td>
+<td>0.994</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="integration.html" class="btn btn-neutral float-right" title="HTM Codec Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="eval-model-08.html" class="btn btn-neutral" title="Model trained from size 08x08" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Pharrell.zx WANG.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
