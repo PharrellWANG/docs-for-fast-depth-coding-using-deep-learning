@@ -92,7 +92,7 @@ Edge analysis algorithm implemented in python is provided for downloading.
 :download:`Edge Analysis in Python<snippets/edge_strength_analysis.py>`
 
 
-See below for code snippets for a quick sense.
+See below code snippets for a quick sense.
 
 This is how we define the edge strength:
 
