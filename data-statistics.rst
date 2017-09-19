@@ -195,7 +195,7 @@ Final Data Description
    | 3  | val_16x16.csv     |15.6  MB    | 600*32    | validation|
    +----+-------------------+------------+-----------+-----------+
 
+
 1. After trying to train data of size 04x04, it does not learn well, only top-28 accuracy is around 0.95.
 
-2. Too few data for size 32x32 and 64x64 after smooth removing. We resize them
-using Bilinear Interpolation for employing learned model for size 16x16
+2. Too few data for size 32x32 and 64x64 after smooth removing. We resize them using Bilinear Interpolation for employing learned model for size 16x16

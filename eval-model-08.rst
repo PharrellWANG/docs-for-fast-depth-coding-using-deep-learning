@@ -30,7 +30,7 @@ Model trained from size 08x08
 
 Model Performance on Validating Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Evaluation batch 100, number of batches 192.
+Evaluation batch size 100, number of batches 192.
 
 Using validating dataset, the details are documented below:
 
@@ -74,7 +74,7 @@ Using validating dataset, the details are documented below:
 
 Model Performance on Testing Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Evaluation batch 100, number of batches 192.
+Evaluation batch size 100, number of batches 192.
 
 Using testing dataset, the details are documented below:
 

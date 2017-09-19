@@ -33,7 +33,7 @@ Using blocks of size 16x16
 --------------------------
 Model Performance on Validating Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Evaluation batch 100, number of batches 192.
+Evaluation batch size 100, number of batches 192.
 
 Using validating dataset, the details are documented below:
 
@@ -77,7 +77,7 @@ Using validating dataset, the details are documented below:
 
 Model Performance on Testing Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Evaluation batch 100, number of batches 192.
+Evaluation batch size 100, number of batches 192.
 
 Using testing dataset, the details are documented below:
 
@@ -137,7 +137,7 @@ We have tried four resizing method:
             no need for anther ``test_32x32.csv``.
 
 
-Evaluation batch 100, number of batches 192.
+Evaluation batch size 100, number of batches 192.
 
 Performance with Bilinear Interpolation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -221,7 +221,7 @@ Total samples: 1728
     >>> 54*32
     1728
 
-Evaluation batch 100, number of batches 17.
+Evaluation batch size 100, number of batches 17.
 
 
     +----+-----------------+---------------+
