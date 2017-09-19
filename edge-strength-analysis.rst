@@ -123,7 +123,7 @@ This is how we define the edge strength:
 
             assert (data.ndim == 1)
 
-Then calculating top (width*2 && non-zero) average.
+Then calculate top (width*2 && non-zero) average.
 
 .. code-block:: python
 
