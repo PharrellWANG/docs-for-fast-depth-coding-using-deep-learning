@@ -64,7 +64,7 @@ we need to do are
 
 1. to place it in the correct position in HTM 16.2 codebase.
 
-2. to discuss a method for reducing the wedgelet candidates making use of the angular predictions from learned deep model.
+2. to discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
 
 Thank you for reading.
 
