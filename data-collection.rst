@@ -3,29 +3,23 @@ Data Collection
 
 This document will show you how to collect the data for *fast depth coding using deep learning*.
 
-.. note::
-        Please notice here we elaborated the training data collecting process.
-        The testing/validating data are collected using the same methodology but
-        omitted here for clarity. For the details of the testing/validating data,
-        please check out :ref:`final-data-description`.
-
 Training Data Source
 --------------------
 **We collect the data by encoding the video sequences.**
 
 Data are collected from four video sequences.
 
-   +----+-------------------------+------------+-----------+--------+
-   | #  | Name of the Sequence    | Resolution | Usage     | Frames |
-   +====+=========================+============+===========+========+
-   | 1  | Balloons                |1024x768    | train     | 300    |
-   +----+-------------------------+------------+-----------+--------+
-   | 2  | kendo                   |1024x768    | train     | 300    |
-   +----+-------------------------+------------+-----------+--------+
-   | 3  | poznan_street           |1920x1088   | train     | 250    |
-   +----+-------------------------+------------+-----------+--------+
-   | 4  | undo_dancer             |1920x1088   | train     | 250    |
-   +----+-------------------------+------------+-----------+--------+
+   +----+-------------------------+------------+-----------------+--------+
+   | #  | Name of the Sequence    | Resolution | Usage           | Frames |
+   +====+=========================+============+=================+========+
+   | 1  | Balloons                |1024x768    | train/test/eval | 300    |
+   +----+-------------------------+------------+-----------------+--------+
+   | 2  | kendo                   |1024x768    | train/test/eval | 300    |
+   +----+-------------------------+------------+-----------------+--------+
+   | 3  | poznan_street           |1920x1088   | train/test/eval | 250    |
+   +----+-------------------------+------------+-----------------+--------+
+   | 4  | undo_dancer             |1920x1088   | train/test/eval | 250    |
+   +----+-------------------------+------------+-----------------+--------+
 
 
 Method for Collecting the data

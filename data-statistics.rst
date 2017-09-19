@@ -57,15 +57,15 @@ After removing 0, 1, 34, 35, 36:
    +----+-------------------+------------+-----------+-----------+
    | #  | Name of the Files | Size       | Samples   | Usage     |
    +====+===================+============+===========+===========+
-   | 1  |  m_size_04.csv    |75.7  MB    | 1335970   | train     |
+   | 1  |  m_size_04.csv    |75.7  MB    | 1335970   | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 2  |  m_size_08.csv    |130.8 MB    | 600187    | train     |
+   | 2  |  m_size_08.csv    |130.8 MB    | 600187    | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 3  |  m_size_16.csv    |377.3 MB    | 430302    | train     |
+   | 3  |  m_size_16.csv    |377.3 MB    | 430302    | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 4  |  m_size_32.csv    |708.7 GB    | 195943    | train     |
+   | 4  |  m_size_32.csv    |708.7 GB    | 195943    | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 5  |  m_size_64.csv    |1.37  GB    | 92034     | train     |
+   | 5  |  m_size_64.csv    |1.37  GB    | 92034     | train/t/e |
    +----+-------------------+------------+-----------+-----------+
 
 Percentage of non-angular-removed data:
@@ -107,15 +107,15 @@ After removing the smooth areas,
    +----+-------------------+------------+-----------+-----------+
    | #  | Name of the Files | Size       | Samples   | Usage     |
    +====+===================+============+===========+===========+
-   | 1  | sm_size_04.csv    |36.3  MB    | 616281    | train     |
+   | 1  | sm_size_04.csv    |36.3  MB    | 616281    | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 2  | sm_size_08.csv    |91.2  MB    | 403277    | train     |
+   | 2  | sm_size_08.csv    |91.2  MB    | 403277    | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 3  | sm_size_16.csv    |210.9 MB    | 232806    | train     |
+   | 3  | sm_size_16.csv    |210.9 MB    | 232806    | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 4  | sm_size_32.csv    |235.4 MB    | 65481     | train     |
+   | 4  | sm_size_32.csv    |235.4 MB    | 65481     | train/t/e |
    +----+-------------------+------------+-----------+-----------+
-   | 5  | sm_size_64.csv    |271.8 MB    | 19244     | train     |
+   | 5  | sm_size_64.csv    |271.8 MB    | 19244     | train/t/e |
    +----+-------------------+------------+-----------+-----------+
 
 Percentage of smooth-removed data:
@@ -151,7 +151,6 @@ the data sizes of each class vary in a large scale. To tackle the issue: we
 use equal data sizes for each class, abandon the
 extra data.
 
-The mode distribution data are provided for downloading.
 
 Step 5 Tagging
 --------------
