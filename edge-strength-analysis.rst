@@ -142,7 +142,7 @@ Then calculate top (width*2 && non-zero) average.
 
 We encouraging the readers to check the python codes provided below for
 downloading to understand the algorithm used by us. (The python codes for
-the algorithm is easy to understand!)
+the algorithm is short and easy to understand!)
 
 Edge analysis algorithm implemented in python is provided for downloading.
 
