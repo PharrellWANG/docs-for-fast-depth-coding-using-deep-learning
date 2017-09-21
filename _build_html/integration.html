@@ -206,8 +206,9 @@
 </ul>
 <div class="section" id="devices">
 <h3>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
+<div class="figure" id="id1">
 <a class="reference internal image-reference" href="_images/devices.JPG"><img alt="Devices" src="_images/devices.JPG" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Devices for this project</span></p>
 </div>
 <div class="section" id="device-for-data-processing">
 <h4>Device for Data Processing<a class="headerlink" href="#device-for-data-processing" title="Permalink to this headline">¶</a></h4>
@@ -234,6 +235,12 @@
 <li><a class="reference external" href="https://github.com/FloopCZ/tensorflow_cc">Build shared library for using the TensorFlow C++ library</a></li>
 <li><a class="reference external" href="https://cmake.org/">CMake</a></li>
 </ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Archive/Static library</strong> (.a) VS <strong>Shared library</strong> (.so)</p>
+<p><em>Archive libraries</em> (.a) are statically linked i.e when you compile your program with -c option in gcc. So, if there’s any change in library, you need to compile and build your code again.</p>
+<p class="last">The advantage of .so (<em>shared object</em>) over .a library is that <em>they are linked during the runtime</em>, i.e. after creation of your .o file -o option in gcc. So, if there’s any change in .so file, you don’t need to recompile your main program. But make sure that your main program is linked to the new .so file with in command.</p>
+</div>
 </div>
 </div>
 <div class="section" id="integrate-the-model-into-htm">

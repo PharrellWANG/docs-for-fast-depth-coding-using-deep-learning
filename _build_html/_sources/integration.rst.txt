@@ -22,7 +22,7 @@ Devices
    :width: 300px
    :alt: Devices
 
-    Devices for this project
+   Devices for this project
 
 Device for Data Processing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,6 +46,12 @@ Pre-requisites
 2. `Build shared library for using the TensorFlow C++ library <https://github.com/FloopCZ/tensorflow_cc>`_
 
 3. `CMake <https://cmake.org/>`_
+
+.. note:: **Archive/Static library** (.a) VS **Shared library** (.so)
+
+         *Archive libraries* (.a) are statically linked i.e when you compile your program with -c option in gcc. So, if there's any change in library, you need to compile and build your code again.
+
+         The advantage of .so (*shared object*) over .a library is that *they are linked during the runtime*, i.e. after creation of your .o file -o option in gcc. So, if there's any change in .so file, you don't need to recompile your main program. But make sure that your main program is linked to the new .so file with in command.
 
 Integrate the model into HTM
 ----------------------------
