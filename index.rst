@@ -63,6 +63,7 @@ This documentation is organized into a couple sections:
    :maxdepth: 2
    :caption: HTM Codec Integration
 
+   tf-speed
    integration
 
 .. _quick-memo:

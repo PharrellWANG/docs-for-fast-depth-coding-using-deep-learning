@@ -6,15 +6,12 @@ Run the inference in C++
 
 Download the codebase from GitHub: https://github.com/PharrellWANG/Run-Inference-in-Cpp
 
-- Newest stable version of Tensorflow: 1.3
+- **Tensorflow r1.1** is used in this work. (Tensorflow r1.3 is the newest stable version; Tensorflow r1.1 is the last version that Tensorflow supports Mac GPU.)
 
-- Version 1.1 is used in this work.
+- **macOS** is used in this work.
 
-- Tensorflow r1.1 is the last version that Tensorflow supports Mac GPU.
+.. note:: Linux desktop with GPU is highly recommended (Windows OS is not recommended). (Ubuntu is the first choice since it has the largest community support.)
 
-- Windows OS is terrible for Tensorflow.
-
-- Ubuntu desktop with GPU is highly recommended.
 
 Devices
 ~~~~~~~
