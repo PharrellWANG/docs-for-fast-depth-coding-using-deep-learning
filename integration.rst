@@ -1,17 +1,46 @@
 TAppEncoder Integration
 =======================
 
-Run the inference in C++
-------------------------
-
-Download the codebase from GitHub: https://github.com/PharrellWANG/Run-Inference-in-Cpp
-
 - **Tensorflow r1.1** is used in this work. (Tensorflow r1.3 is the newest stable version; Tensorflow r1.1 is the last version that Tensorflow supports Mac GPU.)
 
 - **macOS** is used in this work.
 
 .. note:: Linux desktop with GPU is highly recommended (Windows OS is not recommended). (Ubuntu is the first choice since it has the largest community support.)
 
+Pre-requisites
+~~~~~~~~~~~~~~
+
+1. `Build tensorflow from source <https://www.tensorflow.org/versions/r1.1/install/install_sources>`_
+
+2. `Build shared library for using the TensorFlow C++ library <https://github.com/FloopCZ/tensorflow_cc>`_
+
+3. `CMake <https://cmake.org/>`_
+
+.. note:: **Archive/Static library** (.a) VS **Shared library** (.so)
+
+         *Archive libraries* (.a) are statically linked i.e when you compile your program with -c option in gcc. So, if there's any change in library, you need to compile and build your code again.
+
+         The advantage of .so (*shared object*) over .a library is that *they are linked during the runtime*, i.e. after creation of your .o file -o option in gcc. So, if there's any change in .so file, you don't need to recompile your main program. But make sure that your main program is linked to the new .so file with in command.
+
+Integrate the model into HTM
+----------------------------
+Download codebase from GitHub: https://github.com/PharrellWANG/HTM162-Bazel-Cmake
+
+There are two Apps in the above project.
+
+- TAppClassifier
+- TAppEncoder
+
+**TAppClassifier** is the skeleton code that we are using for integration.
+It is a self-contained c++ Application which can be built from both
+Bazel and CMake.
+
+ResNet engine has been integrated to **TAppEncoder** for depth map angular modes [2, 34] prediction.
+
+
+**Todo**
+
+1. Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
 
 Devices
 ~~~~~~~
@@ -34,33 +63,4 @@ Device for Training Models
 - Memory 16GB 1600MHz DDR3
 - Nvidia GTX980, Memory 4GB (External GPU)
 
-
-Pre-requisites
-~~~~~~~~~~~~~~
-
-1. `Build tensorflow from source <https://www.tensorflow.org/versions/r1.1/install/install_sources>`_
-
-2. `Build shared library for using the TensorFlow C++ library <https://github.com/FloopCZ/tensorflow_cc>`_
-
-3. `CMake <https://cmake.org/>`_
-
-.. note:: **Archive/Static library** (.a) VS **Shared library** (.so)
-
-         *Archive libraries* (.a) are statically linked i.e when you compile your program with -c option in gcc. So, if there's any change in library, you need to compile and build your code again.
-
-         The advantage of .so (*shared object*) over .a library is that *they are linked during the runtime*, i.e. after creation of your .o file -o option in gcc. So, if there's any change in .so file, you don't need to recompile your main program. But make sure that your main program is linked to the new .so file with in command.
-
-Integrate the model into HTM
-----------------------------
-Download codebase from GitHub: https://github.com/PharrellWANG/HTM162-Bazel-Cmake
-
-Now it has been implemented for angular modes when doing depth map intra prediction.
-
-
-**Todo**
-
-1. Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
-
-
-Thank you for reading
-End of the documentation
+Thank you for reading.
