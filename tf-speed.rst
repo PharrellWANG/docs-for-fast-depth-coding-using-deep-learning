@@ -61,6 +61,38 @@ Look at the time cost.
 Session Run with AVX, AVX2, SSE4.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Here we have two choices:
+
+1. Running all samples from one video frame in one session (:ref:`figure3`)
+2. Running one sample in one session (:ref:`figure4`)
+
+.. _figure3:
+.. figure:: ./images/cpu_session_one.png
+   :scale: 30 %
+   :alt: gpu_session_one
+   :align: center
+
+   Figure 3. Running all samples in one session
+
+.. _figure4:
+.. figure:: ./images/cpu_session_many.png
+   :scale: 30 %
+   :alt: gpu_session_many
+   :align: center
+
+   Figure 4. Running one sample in one session
+
+Look at the time cost.
+
+   +----+----------------------------------------+------------+---------------------------------+
+   | #  | Scenario                               | Time Cost  | the difficulty of implementation|
+   +====+========================================+============+=================================+
+   | 1  | Init one  session  for many block      |   15.56 s  |   not intuitive                 |
+   +----+----------------------------------------+------------+---------------------------------+
+   | 2  | Init many sessions for many blocks     |   33.91 s  |   intuitive                     |
+   +----+----------------------------------------+------------+---------------------------------+
+
+
 Session Run with AVX, AVX2, SSE4.2 and GPU Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
