@@ -46,6 +46,8 @@ ResNet engine has been integrated to **TAppEncoder** for depth map angular modes
 
 3. Try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
 
+4. Finalize the final solution, and gather the materials, write the paper!
+
 Why todo#3?
 
 Prediction accuracy will be decreased by 2%~3%. But since flops has been
