@@ -43,16 +43,18 @@ ResNet engine has been integrated to **TAppEncoder** for depth map angular modes
 In meeting:
 
 1. ``With All`` Discuss the time cost issue of ResNet neural engine.
-2. ``With Dr.Chan`` Finalize the solution for writing the paper/thesis.
+2. propose to implement the resnet on screen content coding.
+    Ask Dr.Tsang how much time it would take for the data collecting algorithm.
+3. ``With Dr.Chan`` Finalize the solution for writing the paper/thesis.
 
 After meeting:
 
-3. ``With Dr.Tsang`` Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
-4. ``Pharrell.zx`` Run RD experiments after TODO#3 will has been finished.
-5. ``Pharrell.zx`` Try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
-6. ``Pharrell.zx`` Gather the statistics/figures/meterials and write the paper!
+4. ``With Dr.Tsang`` Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
+5. ``Pharrell.zx`` Run RD experiments after TODO#3 will has been finished.
+6. ``Pharrell.zx`` Try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
+7. ``Pharrell.zx`` Gather the statistics/figures/meterials and write the paper!
 
-.. note:: Why do we have todo#5? Prediction accuracy will be decreased
+.. note:: Why do we have todo#6? Prediction accuracy will be decreased
             by 2%~3%. But since flops has been reduced from 600k to 130k,
             the speed of prediction in c++ should be faster.
 
