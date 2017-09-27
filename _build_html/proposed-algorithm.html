@@ -37,7 +37,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fast Depth Coding Using Deep Learning 0.1.0 documentation" href="index.html"/>
         <link rel="next" title="Data Collection" href="data-collection.html"/>
-        <link rel="prev" title="Fast Intra Coding for Depth Map Using Deep Learning" href="index.html"/> 
+        <link rel="prev" title="Fast Depth Coding Using Deep Learning" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -188,6 +188,10 @@
             
   <div class="section" id="proposed-algorithm">
 <h1>Proposed Algorithm<a class="headerlink" href="#proposed-algorithm" title="Permalink to this headline">¶</a></h1>
+<p>Depth map coding is consuming a lot of time when encoding
+3D video sequences. propose an algorithm to balance
+the trade-off between <strong>coding efficiency</strong> and <strong>computational complexity</strong>
+using deep learning.</p>
 <div class="section" id="flow-chart">
 <h2>Flow Chart<a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id1">
@@ -197,12 +201,39 @@
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">1</span></code> Get the Luma pixel values from one depth block.
+(The block can be of size 8x8, 16x16, 32x32)</p>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">2</span></code> Feed the 2D matrix of Luma pixels into <strong>learned model</strong> for
+getting the <strong>top-16 predictions</strong>.</p>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">3</span></code> Add <strong>top 16 predictions</strong> into the <strong>RMD LIST</strong>.</p>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">4</span></code> Check whether mode 2 is inside <strong>RMD LIST</strong>. If yes, add mode 34 into
+<strong>RMD LIST</strong>; otherwise jump to <em>step 5</em>.</p>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">5</span></code> Add mode 0, 1, DMM1, DMM4 into <strong>RMD LIST</strong>.</p>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">6</span></code> <code class="docutils literal"><span class="pre">Do</span> <span class="pre">RMD</span></code>. For DMM1, only check the directions covered by
+<strong>top-16 predictions</strong>.</p>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">7</span></code> Add two modes into <strong>FULL RDO LIST</strong>. <code class="docutils literal"><span class="pre">Do</span> <span class="pre">full</span> <span class="pre">RDO</span></code>.</p>
+<p><code class="docutils literal"><span class="pre">step</span> <span class="pre">8</span></code> Obtain the <strong>best mode</strong> for the depth block.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The above process can be applied to a batch of blocks, in which case
+the time cost of prediction can be optimized.
+For details, see <a class="reference internal" href="tf-speed.html#time-cost-analysis"><span class="std std-ref">Time Cost of TF in C++</span></a></p>
+</div>
 </div>
 <div class="section" id="deprecated-flow-chart">
 <h2>[Deprecated]Flow chart<a class="headerlink" href="#deprecated-flow-chart" title="Permalink to this headline">¶</a></h2>
 <p>This chart has been deprecated. Kept here only for reference.</p>
-<p>Edge strength analysis is lacking novelty. And removing it only will
-decrease the accuracy of ResNet prediction by roughly 2%~3%.</p>
+<p><strong>Deprecation Summary</strong></p>
+<ul class="simple">
+<li>For below <code class="docutils literal"><span class="pre">reason</span> <span class="pre">1</span></code> and <code class="docutils literal"><span class="pre">reason</span> <span class="pre">2</span></code>, we remove <strong>edge strength analysis</strong>;</li>
+<li>For below <code class="docutils literal"><span class="pre">reason</span> <span class="pre">3</span></code>, we remove <strong>the implementation to texture</strong>.</li>
+</ul>
+<p><strong>Reasons</strong></p>
+<ol class="arabic simple">
+<li>Edge strength analysis is not innovative.</li>
+<li>Besides, removing it from the flow chart only will decrease the accuracy of ResNet prediction by roughly 2%~3%.</li>
+<li>And according to <strong>Dr.Tsang</strong>, since we are only using luma pixel values, it seems we should not apply our model into the texture blocks.</li>
+</ol>
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="_images/deprecated-Proposed-Intra-Mode-Decision-Flowchart.svg"><img alt="deprecated proposed fast intra mode decision algorithm" src="_images/deprecated-Proposed-Intra-Mode-Decision-Flowchart.svg" width="600px" /></a>
 <p class="caption"><span class="caption-text">Figure D-1: Flowchart for Proposed Fast Intra Mode Decision Algorithm</span></p>
@@ -223,7 +254,7 @@ decrease the accuracy of ResNet prediction by roughly 2%~3%.</p>
         <a href="data-collection.html" class="btn btn-neutral float-right" title="Data Collection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Fast Intra Coding for Depth Map Using Deep Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Fast Depth Coding Using Deep Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

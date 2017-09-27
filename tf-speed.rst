@@ -1,3 +1,5 @@
+.. _Time-Cost-Analysis:
+
 Time Cost of TF in C++
 ======================
 
