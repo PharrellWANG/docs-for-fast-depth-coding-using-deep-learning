@@ -15,6 +15,8 @@ cost. See experiments for details.
 
 Experiments
 -----------
+The experiments in this section are performed by loading ResNet graph of
+size [16, 16, 32, 64], units 5.
 
 Here we present the experiments for evaluating the time cost
 of ``session->Run()``.
@@ -182,6 +184,3 @@ only for processing size 8x8 blocks
 
 We also want to do predictions for size 16x16 and 32x32. Hence the time cost are
 roughly 30 ~ 60 minutes.
-
-
-
