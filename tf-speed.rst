@@ -131,4 +131,4 @@ Look at the time cost.
 Conclusions
 -----------
 
-Running 1 sample in 1 session is much easier to implement. But the time cost will be *more than doubled*.
+Fastest way: Run a large batch of predictions in a single session using GPU.

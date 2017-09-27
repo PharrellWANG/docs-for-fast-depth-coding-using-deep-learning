@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Fast Intra Coding for both texture and depth Using Deep Learning &mdash; Fast Intra Coding for both texture and depth Using Deep Learning 0.1.0 documentation</title>
+  <title>Fast Intra Coding for Depth Map Using Deep Learning &mdash; Fast Intra Coding for Depth Map Using Deep Learning 0.1.0 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Fast Intra Coding for both texture and depth Using Deep Learning 0.1.0 documentation" href="#"/>
+    <link rel="top" title="Fast Intra Coding for Depth Map Using Deep Learning 0.1.0 documentation" href="#"/>
         <link rel="next" title="Proposed Algorithm" href="proposed-algorithm.html"/> 
 
   
@@ -55,7 +55,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Fast Intra Coding for both texture and depth Using Deep Learning
+            <a href="#" class="icon icon-home"> Fast Intra Coding for Depth Map Using Deep Learning
           
 
           
@@ -109,10 +109,10 @@
 <li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from size 08x08</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from size 16x16</a></li>
 </ul>
-<p class="caption"><span class="caption-text">HTM Codec Integration</span></p>
+<p class="caption"><span class="caption-text">Encoder Integration</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tf-speed.html">Time Cost of Tensorflow in C++</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integration.html">HTM Codec Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tf-speed.html">Time Cost of TF in C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">TAppEncoder Integration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quick Memo</span></p>
 <ul>
@@ -131,7 +131,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Fast Intra Coding for both texture and depth Using Deep Learning</a>
+          <a href="#">Fast Intra Coding for Depth Map Using Deep Learning</a>
         
       </nav>
 
@@ -161,7 +161,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Fast Intra Coding for both texture and depth Using Deep Learning</li>
+      <li>Fast Intra Coding for Depth Map Using Deep Learning</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,18 +180,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="fast-intra-coding-for-both-texture-and-depth-using-deep-learning">
-<h1>Fast Intra Coding for both texture and depth Using Deep Learning<a class="headerlink" href="#fast-intra-coding-for-both-texture-and-depth-using-deep-learning" title="Permalink to this headline">¶</a></h1>
-<p><strong>Fast Intra Coding for both texture and depth Using Deep Learning</strong> is
+  <div class="section" id="fast-intra-coding-for-depth-map-using-deep-learning">
+<h1>Fast Intra Coding for Depth Map Using Deep Learning<a class="headerlink" href="#fast-intra-coding-for-depth-map-using-deep-learning" title="Permalink to this headline">¶</a></h1>
+<p><strong>Fast Intra Coding for Depth Map Using Deep Learning</strong> is
 the thesis topic. The details of the implementation are documented here
-for reference. (We are targeting <strong>3D-HEVC</strong>)</p>
+for reference.</p>
 <p>This documentation is organized into a couple sections:</p>
 <ul class="simple">
 <li><a class="reference internal" href="#proposed-algorithm"><span class="std std-ref">Proposed Algorithm</span></a></li>
 <li><a class="reference internal" href="#data-processing"><span class="std std-ref">Data Processing</span></a></li>
 <li><a class="reference internal" href="#model-training"><span class="std std-ref">Model Training</span></a></li>
 <li><a class="reference internal" href="#model-testing"><span class="std std-ref">Model Evaluating</span></a></li>
-<li><a class="reference internal" href="#codec-integration"><span class="std std-ref">HTM Codec Integration</span></a></li>
+<li><a class="reference internal" href="#codec-integration"><span class="std std-ref">Encoder Integration</span></a></li>
 <li><a class="reference internal" href="#quick-memo"><span class="std std-ref">Quick Memo</span></a></li>
 </ul>
 <div class="toctree-wrapper compound" id="proposed-algorithm">
@@ -270,15 +270,15 @@ for reference. (We are targeting <strong>3D-HEVC</strong>)</p>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="codec-integration">
-<p class="caption"><span class="caption-text">HTM Codec Integration</span><a class="headerlink" href="#codec-integration" title="Permalink to this toctree">¶</a></p>
+<p class="caption"><span class="caption-text">Encoder Integration</span><a class="headerlink" href="#codec-integration" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tf-speed.html">Time Cost of Tensorflow in C++</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="tf-speed.html">Time Cost of TF in C++</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tf-speed.html#motivation">Motivation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tf-speed.html#experiments">Experiments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tf-speed.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="integration.html">HTM Codec Integration</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">TAppEncoder Integration</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="integration.html#run-the-inference-in-c">Run the inference in C++</a></li>
 <li class="toctree-l2"><a class="reference internal" href="integration.html#integrate-the-model-into-htm">Integrate the model into HTM</a></li>
 </ul>
