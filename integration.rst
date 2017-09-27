@@ -44,6 +44,13 @@ ResNet engine has been integrated to **TAppEncoder** for depth map angular modes
 
 2. Discuss the time cost issue of ResNet neural engine. Run experiments for it after TODO#1 is finished.
 
+3. Try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
+
+Why todo#3?
+
+Prediction accuracy will be decreased by 2%~3%. But since flops has been
+reduced from 600k to 130k, the speed of prediction in c++ should be faster.
+
 Devices
 -------
 .. figure:: images/devices.JPG
