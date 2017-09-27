@@ -133,8 +133,55 @@ Look at the time cost.
    | 2  | Init many sessions for many blocks     |   55.26 s  |   intuitive                     |
    +----+----------------------------------------+------------+---------------------------------+
 
-
 Conclusions
 -----------
 
-Fastest way: Run a large batch of predictions in a single session using GPU.
+Now I put the three tables above together for comparison:
+
+Plain CPU Config
+^^^^^^^^^^^^^^^^
+   +----+----------------------------------------+------------+---------------------------------+
+   | #  | Scenario                               | Time Cost  | the difficulty of implementation|
+   +====+========================================+============+=================================+
+   | 1  | Init one  session  for many block      |   21.37 s  |   not intuitive                 |
+   +----+----------------------------------------+------------+---------------------------------+
+   | 2  | Init many sessions for many blocks     |   47.81 s  |   intuitive                     |
+   +----+----------------------------------------+------------+---------------------------------+
+Employing AVX, SSE4.2
+^^^^^^^^^^^^^^^^^^^^^
+   +----+----------------------------------------+------------+---------------------------------+
+   | #  | Scenario                               | Time Cost  | the difficulty of implementation|
+   +====+========================================+============+=================================+
+   | 1  | Init one  session  for many block      |   15.56 s  |   not intuitive                 |
+   +----+----------------------------------------+------------+---------------------------------+
+   | 2  | Init many sessions for many blocks     |   33.91 s  |   intuitive                     |
+   +----+----------------------------------------+------------+---------------------------------+
+Employing AVX, SSE4.2 and GPU(Parallel computing)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   +----+----------------------------------------+------------+---------------------------------+
+   | #  | Scenario                               | Time Cost  | the difficulty of implementation|
+   +====+========================================+============+=================================+
+   | 1  | Init one  session  for many block      |  **2.03** s|   not intuitive                 |
+   +----+----------------------------------------+------------+---------------------------------+
+   | 2  | Init many sessions for many blocks     |   55.26 s  |   intuitive                     |
+   +----+----------------------------------------+------------+---------------------------------+
+
+Apparently, the fastest way is **running a large batch of predictions in a single session using GPU**.
+
+Further more, consider this situation:
+
+- 300 frames to process.
+- 12288 8x8 blocks for 1 frame. Time cost 2.03 s for such a frame.
+- Then, do a calculation:
+
+      >>> 300 * 2.03 / 60
+      10.149999999999999 minutes
+
+That is to say, 10 minutes for a video sequence of 300 frames
+only for processing size 8x8 blocks
+
+We also want to do predictions for size 16x16 and 32x32. Hence the time cost are
+roughly 30 ~ 60 minutes.
+
+
+
