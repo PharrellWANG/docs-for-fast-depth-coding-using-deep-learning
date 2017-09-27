@@ -25,8 +25,11 @@ Total 12288 predictions. (``1024/8*768/8=12288``)
 
 Session Run
 ~~~~~~~~~~~
+Now we only use normal CPU computing, which means our binary is not compiled
+with the AVX and SSE4.2 offered by Intel CPU. (AVX and SSE4.2 are CPU
+infrastructures for faster matrix computations)
 
-Here we have two choices:
+Two choices:
 
 1. Running all samples from one video frame in one session (:ref:`figure1`)
 2. Running one sample in one session (:ref:`figure2`)
@@ -60,8 +63,9 @@ Look at the time cost.
 
 Session Run with AVX, AVX2, SSE4.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Now we are only using the benefits offered by CPU.
 
-Here we have two choices:
+Two choices:
 
 1. Running all samples from one video frame in one session (:ref:`figure3`)
 2. Running one sample in one session (:ref:`figure4`)
@@ -96,7 +100,9 @@ Look at the time cost.
 Session Run with AVX, AVX2, SSE4.2 and GPU Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Here we have two choices:
+Now we are using both the benefits offered by CPU and GPU.
+
+Two choices:
 
 1. Running all samples from one video frame in one session (:ref:`figure5`)
 2. Running one sample in one session (:ref:`figure6`)
