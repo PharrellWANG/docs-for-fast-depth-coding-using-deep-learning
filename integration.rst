@@ -1,5 +1,5 @@
-TAppEncoder Integration
-=======================
+Encoder Integration in C++
+==========================
 
 - **Tensorflow r1.1** is used in this work. (Tensorflow r1.3 is the newest stable version; Tensorflow r1.1 is the last version that Tensorflow supports Mac GPU.)
 
@@ -8,7 +8,7 @@ TAppEncoder Integration
 .. note:: Linux desktop with GPU is highly recommended (Windows OS is not recommended). (Ubuntu is the first choice since it has the largest community support.)
 
 Pre-requisites
-~~~~~~~~~~~~~~
+--------------
 
 1. `Build tensorflow from source <https://www.tensorflow.org/versions/r1.1/install/install_sources>`_
 
@@ -43,7 +43,7 @@ ResNet engine has been integrated to **TAppEncoder** for depth map angular modes
 1. Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
 
 Devices
-~~~~~~~
+-------
 .. figure:: images/devices.JPG
    :width: 300px
    :alt: Devices
@@ -51,13 +51,13 @@ Devices
    Devices for this project
 
 Device for Data Processing
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 - **iMac (21.5-inch 2017)**
 - Processor 3GHz Intel Core i5
 - Memory 8GB 2400 MHz DDR4
 
 Device for Training Models
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 - **Macbook Pro (15-inch, Mid 2015)**
 - Processor 2.2GHz Intel Core i7
 - Memory 16GB 1600MHz DDR3

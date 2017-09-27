@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TAppEncoder Integration &mdash; Fast Intra Coding for Depth Map Using Deep Learning 0.1.0 documentation</title>
+  <title>Encoder Integration in C++ &mdash; Fast Intra Coding for Depth Map Using Deep Learning 0.1.0 documentation</title>
   
 
   
@@ -113,17 +113,14 @@
 <p class="caption"><span class="caption-text">Encoder Integration</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tf-speed.html">Time Cost of TF in C++</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">TAppEncoder Integration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#run-the-inference-in-c">Run the inference in C++</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#devices">Devices</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#device-for-data-processing">Device for Data Processing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#device-for-training-models">Device for Training Models</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#pre-requisites">Pre-requisites</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Encoder Integration in C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrate-the-model-into-htm">Integrate the model into HTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#devices">Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#device-for-data-processing">Device for Data Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-for-training-models">Device for Training Models</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -174,7 +171,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>TAppEncoder Integration</li>
+      <li>Encoder Integration in C++</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,11 +190,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tappencoder-integration">
-<h1>TAppEncoder Integration<a class="headerlink" href="#tappencoder-integration" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="run-the-inference-in-c">
-<h2>Run the inference in C++<a class="headerlink" href="#run-the-inference-in-c" title="Permalink to this headline">¶</a></h2>
-<p>Download the codebase from GitHub: <a class="reference external" href="https://github.com/PharrellWANG/Run-Inference-in-Cpp">https://github.com/PharrellWANG/Run-Inference-in-Cpp</a></p>
+  <div class="section" id="encoder-integration-in-c">
+<h1>Encoder Integration in C++<a class="headerlink" href="#encoder-integration-in-c" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><strong>Tensorflow r1.1</strong> is used in this work. (Tensorflow r1.3 is the newest stable version; Tensorflow r1.1 is the last version that Tensorflow supports Mac GPU.)</li>
 <li><strong>macOS</strong> is used in this work.</li>
@@ -206,32 +200,8 @@
 <p class="first admonition-title">Note</p>
 <p class="last">Linux desktop with GPU is highly recommended (Windows OS is not recommended). (Ubuntu is the first choice since it has the largest community support.)</p>
 </div>
-<div class="section" id="devices">
-<h3>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h3>
-<div class="figure" id="id1">
-<a class="reference internal image-reference" href="_images/devices.JPG"><img alt="Devices" src="_images/devices.JPG" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Devices for this project</span></p>
-</div>
-<div class="section" id="device-for-data-processing">
-<h4>Device for Data Processing<a class="headerlink" href="#device-for-data-processing" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><strong>iMac (21.5-inch 2017)</strong></li>
-<li>Processor 3GHz Intel Core i5</li>
-<li>Memory 8GB 2400 MHz DDR4</li>
-</ul>
-</div>
-<div class="section" id="device-for-training-models">
-<h4>Device for Training Models<a class="headerlink" href="#device-for-training-models" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><strong>Macbook Pro (15-inch, Mid 2015)</strong></li>
-<li>Processor 2.2GHz Intel Core i7</li>
-<li>Memory 16GB 1600MHz DDR3</li>
-<li>Nvidia GTX980, Memory 4GB (External GPU)</li>
-</ul>
-</div>
-</div>
 <div class="section" id="pre-requisites">
-<h3>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h3>
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><a class="reference external" href="https://www.tensorflow.org/versions/r1.1/install/install_sources">Build tensorflow from source</a></li>
 <li><a class="reference external" href="https://github.com/FloopCZ/tensorflow_cc">Build shared library for using the TensorFlow C++ library</a></li>
@@ -244,22 +214,47 @@
 <p class="last">The advantage of .so (<em>shared object</em>) over .a library is that <em>they are linked during the runtime</em>, i.e. after creation of your .o file -o option in gcc. So, if there’s any change in .so file, you don’t need to recompile your main program. But make sure that your main program is linked to the new .so file with in command.</p>
 </div>
 </div>
-</div>
 <div class="section" id="integrate-the-model-into-htm">
 <h2>Integrate the model into HTM<a class="headerlink" href="#integrate-the-model-into-htm" title="Permalink to this headline">¶</a></h2>
-<p>This is a Todo section.</p>
-<p>Shall be done after meeting.</p>
-<p>I think it will be much better for the proposed algorithm to be
-theoretically admitted by Dr.Chan before I run the codec
-for PSNR/BD Rate performance.</p>
-<p>Besides, I wish i can have some help from Dr.Tsang to implement it into
-fast wedgelet prediction. The C++ codes for running the model is ready. What
-we need to do are</p>
+<p>Download codebase from GitHub: <a class="reference external" href="https://github.com/PharrellWANG/HTM162-Bazel-Cmake">https://github.com/PharrellWANG/HTM162-Bazel-Cmake</a></p>
+<p>There are two Apps in the above project.</p>
+<ul class="simple">
+<li>TAppClassifier</li>
+<li>TAppEncoder</li>
+</ul>
+<p><strong>TAppClassifier</strong> is the skeleton code that we are using for integration.
+It is a self-contained c++ Application which can be built from both
+Bazel and CMake.</p>
+<p>ResNet engine has been integrated to <strong>TAppEncoder</strong> for depth map angular modes [2, 34] prediction.</p>
+<p><strong>Todo</strong></p>
 <ol class="arabic simple">
-<li>to place it in the correct position in HTM 16.2 codebase.</li>
-<li>to discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.</li>
+<li>Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.</li>
 </ol>
+</div>
+<div class="section" id="devices">
+<h2>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="_images/devices.JPG"><img alt="Devices" src="_images/devices.JPG" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Devices for this project</span></p>
+</div>
+<div class="section" id="device-for-data-processing">
+<h3>Device for Data Processing<a class="headerlink" href="#device-for-data-processing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>iMac (21.5-inch 2017)</strong></li>
+<li>Processor 3GHz Intel Core i5</li>
+<li>Memory 8GB 2400 MHz DDR4</li>
+</ul>
+</div>
+<div class="section" id="device-for-training-models">
+<h3>Device for Training Models<a class="headerlink" href="#device-for-training-models" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Macbook Pro (15-inch, Mid 2015)</strong></li>
+<li>Processor 2.2GHz Intel Core i7</li>
+<li>Memory 16GB 1600MHz DDR3</li>
+<li>Nvidia GTX980, Memory 4GB (External GPU)</li>
+</ul>
 <p>Thank you for reading.</p>
+</div>
 </div>
 </div>
 
