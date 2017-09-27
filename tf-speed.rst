@@ -16,6 +16,9 @@ cost. See experiments for details.
 Experiments
 -----------
 
+Session Run
+~~~~~~~~~~~
+
 Here we present the experiments for evaluating the time cost
 of ``session->Run()``.
 
@@ -53,6 +56,13 @@ Look at the time cost.
    +----+----------------------------------------+------------+---------------------------------+
    | 2  | Init many sessions for many blocks     |   47.81 s  |   easy                          |
    +----+----------------------------------------+------------+---------------------------------+
+
+
+Session Run with AVX, AVX2, SSE4.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Session Run with AVX, AVX2, SSE4.2 and GPU Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Conclusions

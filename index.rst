@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Fast Intra Coding for both texture and depth Using Deep Learning
-================================================================
+Fast Intra Coding for Depth Map Using Deep Learning
+===================================================
 
-**Fast Intra Coding for both texture and depth Using Deep Learning** is
+**Fast Intra Coding for Depth Map Using Deep Learning** is
 the thesis topic. The details of the implementation are documented here
-for reference. (We are targeting **3D-HEVC**)
+for reference.
 
 This documentation is organized into a couple sections:
 
