@@ -3,12 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Fast Intra Coding for Depth Map Using Deep Learning
-===================================================
+Fast Depth Coding Using Deep Learning
+=====================================
 
-**Fast Intra Coding for Depth Map Using Deep Learning** is
-the thesis topic. The details of the implementation are documented here
-for reference.
+**Fast Depth Coding Using Deep Learning** is the thesis topic.
+The details of the implementation are documented here for reference.
 
 This documentation is organized into a couple sections:
 
