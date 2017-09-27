@@ -59,9 +59,9 @@ Look at the time cost.
    +----+----------------------------------------+------------+---------------------------------+
    | #  | Scenario                               | Time Cost  | the difficulty of implementation|
    +====+========================================+============+=================================+
-   | 1  | Init one  session  for many block      |   21.37 s  |   not intuitive                 |
+   | 1  | Init 1  session  for 12288 block       |   21.37 s  |   not intuitive                 |
    +----+----------------------------------------+------------+---------------------------------+
-   | 2  | Init many sessions for many blocks     |   47.81 s  |   intuitive                     |
+   | 2  | Init 12288 sessions for 12288 blocks   |   47.81 s  |   intuitive                     |
    +----+----------------------------------------+------------+---------------------------------+
 
 
@@ -95,9 +95,9 @@ Look at the time cost.
    +----+----------------------------------------+------------+---------------------------------+
    | #  | Scenario                               | Time Cost  | the difficulty of implementation|
    +====+========================================+============+=================================+
-   | 1  | Init one  session  for many block      |   15.56 s  |   not intuitive                 |
+   | 1  | Init 1  session  for 12288 block       |   15.56 s  |   not intuitive                 |
    +----+----------------------------------------+------------+---------------------------------+
-   | 2  | Init many sessions for many blocks     |   33.91 s  |   intuitive                     |
+   | 2  | Init 12288 sessions for 12288 blocks   |   33.91 s  |   intuitive                     |
    +----+----------------------------------------+------------+---------------------------------+
 
 
@@ -132,9 +132,9 @@ Look at the time cost.
    +----+----------------------------------------+------------+---------------------------------+
    | #  | Scenario                               | Time Cost  | the difficulty of implementation|
    +====+========================================+============+=================================+
-   | 1  | Init one  session  for many block      |  **2.03** s|   not intuitive                 |
+   | 1  | Init 1  session  for 12288 block       |  **2.03** s|   not intuitive                 |
    +----+----------------------------------------+------------+---------------------------------+
-   | 2  | Init many sessions for many blocks     |   55.26 s  |   intuitive                     |
+   | 2  | Init 12288 sessions for 12288 blocks   |   55.26 s  |   intuitive                     |
    +----+----------------------------------------+------------+---------------------------------+
 
 Conclusions
@@ -148,9 +148,9 @@ Plain CPU Config
    +----+----------------------------------------+------------+---------------------------------+
    | #  | Scenario                               | Time Cost  | the difficulty of implementation|
    +====+========================================+============+=================================+
-   | 1  | Init one  session  for many block      |   21.37 s  |   not intuitive                 |
+   | 1  | Init 1  session  for 12288 block       |   21.37 s  |   not intuitive                 |
    +----+----------------------------------------+------------+---------------------------------+
-   | 2  | Init many sessions for many blocks     |   47.81 s  |   intuitive                     |
+   | 2  | Init 12288 sessions for 12288 blocks   |   47.81 s  |   intuitive                     |
    +----+----------------------------------------+------------+---------------------------------+
 
 Employing AVX, SSE4.2
@@ -159,9 +159,9 @@ Employing AVX, SSE4.2
    +----+----------------------------------------+------------+---------------------------------+
    | #  | Scenario                               | Time Cost  | the difficulty of implementation|
    +====+========================================+============+=================================+
-   | 1  | Init one  session  for many block      |   15.56 s  |   not intuitive                 |
+   | 1  | Init 1  session  for 12288 block       |   15.56 s  |   not intuitive                 |
    +----+----------------------------------------+------------+---------------------------------+
-   | 2  | Init many sessions for many blocks     |   33.91 s  |   intuitive                     |
+   | 2  | Init 12288 sessions for 12288 blocks   |   33.91 s  |   intuitive                     |
    +----+----------------------------------------+------------+---------------------------------+
 
 Employing AVX, SSE4.2 and GPU(Parallel computing)
@@ -170,9 +170,9 @@ Employing AVX, SSE4.2 and GPU(Parallel computing)
    +----+----------------------------------------+------------+---------------------------------+
    | #  | Scenario                               | Time Cost  | the difficulty of implementation|
    +====+========================================+============+=================================+
-   | 1  | Init one  session  for many block      |  **2.03** s|   not intuitive                 |
+   | 1  | Init 1  session  for 12288 block       |  **2.03** s|   not intuitive                 |
    +----+----------------------------------------+------------+---------------------------------+
-   | 2  | Init many sessions for many blocks     |   55.26 s  |   intuitive                     |
+   | 2  | Init 12288 sessions for 12288 blocks   |   55.26 s  |   intuitive                     |
    +----+----------------------------------------+------------+---------------------------------+
 
 Apparently, the fastest way is **running a large batch of predictions in a single session using GPU**.
