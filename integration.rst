@@ -42,6 +42,8 @@ ResNet engine has been integrated to **TAppEncoder** for depth map angular modes
 
 1. Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
 
+2. Discuss the time cost issue of ResNet neural engine. Run experiments for it after TODO#1 is finished.
+
 Devices
 -------
 .. figure:: images/devices.JPG
