@@ -3,6 +3,22 @@
 Data Visualization
 ==================
 
+Summary
+-------
+The modes are chosen based on RD cost, which is a function of
+distortion and coding rate.
+
+Each CU will choose the optimal mode which has
+the least RD Cost.
+
+There might be a chance to choose the mode with distortion
+but lower coding rate.
+
+The distortion would also depend on the distortion
+of synthesized texture view if VSO is on.
+
+Memo
+----
 .. note:: Please notice this visualization is for the data without any
          pre-processing, i.e., the data that we obtained right after encoding the
          video sequences. You can get a sense of what kind of data that we are

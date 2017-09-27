@@ -99,6 +99,8 @@
 <li class="toctree-l1"><a class="reference internal" href="data-collection.html">Data Collection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memo">Memo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#intra-modes-in-hevc">Intra modes in HEVC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples-for-block-size-8x8">Examples for block size 8x8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples-for-block-size-16x16">Examples for block size 16x16</a></li>
@@ -190,6 +192,19 @@
             
   <div class="section" id="data-visualization">
 <span id="data-visu"></span><h1>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>The modes are chosen based on RD cost, which is a function of
+distortion and coding rate.</p>
+<p>Each CU will choose the optimal mode which has
+the least RD Cost.</p>
+<p>There might be a chance to choose the mode with distortion
+but lower coding rate.</p>
+<p>The distortion would also depend on the distortion
+of synthesized texture view if VSO is on.</p>
+</div>
+<div class="section" id="memo">
+<h2>Memo<a class="headerlink" href="#memo" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Please notice this visualization is for the data without any
@@ -225,6 +240,7 @@ the pre-processing steps, such as edge strength analysis for smooth-removing.</p
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">Feel free to click on the figures for inspecting their features carefully by enlarging or downloading. They are licensed under <a class="reference external" href="https://choosealicense.com/licenses/mit/">MIT License</a>.</p>
+</div>
 </div>
 <div class="section" id="intra-modes-in-hevc">
 <h2>Intra modes in HEVC<a class="headerlink" href="#intra-modes-in-hevc" title="Permalink to this headline">¶</a></h2>
