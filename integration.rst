@@ -40,15 +40,21 @@ ResNet engine has been integrated to **TAppEncoder** for depth map angular modes
 
 **Todo**
 
-1. Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
+In meeting:
 
-2. Discuss the time cost issue of ResNet neural engine. Run experiments for it after TODO#1 is finished.
+1. [With all]Discuss the time cost issue of ResNet neural engine.
 
-3. Try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
+3. [With Dr.Chan]Finalize the final solution, and gather the materials, write the paper!
 
-4. Finalize the final solution, and gather the materials, write the paper!
+After meeting:
 
-Why todo#3?
+3. [With Dr.Tsang]Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
+
+4. [me]Run RD experiments after TODO#3 will has been finished.
+
+5. [me]Try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
+
+Why todo#5?
 
 Prediction accuracy will be decreased by 2%~3%. But since flops has been
 reduced from 600k to 130k, the speed of prediction in c++ should be faster.
