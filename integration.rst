@@ -52,23 +52,15 @@ Pre-requisites
 
 Integrate the model into HTM
 ----------------------------
+Download codebase from GitHub: https://github.com/PharrellWANG/HTM162-Bazel-Cmake
 
-This is a Todo section.
-
-Shall be done after meeting.
-
-I think it will be much better for the proposed algorithm to be
-theoretically admitted by Dr.Chan before I run the codec
-for PSNR/BD Rate performance.
-
-Besides, I wish i can have some help from Dr.Tsang to implement it into
-fast wedgelet prediction. The C++ codes for running the model is ready. What
-we need to do are
-
-1. to place it in the correct position in HTM 16.2 codebase.
-
-2. to discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
-
-Thank you for reading.
+Now it has been implemented for angular modes when doing depth map intra prediction.
 
 
+**Todo**
+
+1. Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
+
+
+Thank you for reading
+End of the documentation
