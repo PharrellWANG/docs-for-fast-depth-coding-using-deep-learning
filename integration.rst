@@ -1,5 +1,5 @@
-HTM Codec Integration
-=====================
+TAppEncoder Integration
+=======================
 
 Run the inference in C++
 ------------------------

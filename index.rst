@@ -61,7 +61,7 @@ This documentation is organized into a couple sections:
 
 .. toctree::
    :maxdepth: 2
-   :caption: HTM Codec Integration
+   :caption: Encoder Integration
 
    tf-speed
    integration

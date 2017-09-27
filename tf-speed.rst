@@ -1,5 +1,5 @@
-Time Cost of Tensorflow in C++
-==============================
+Time Cost of TF in C++
+======================
 
 Motivation
 ----------
