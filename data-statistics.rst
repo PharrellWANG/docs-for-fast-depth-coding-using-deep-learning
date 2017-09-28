@@ -50,7 +50,7 @@ Mode distribution data after merging are provided for downloading as text format
 Step 2 Removing some modes
 --------------------------
 
-Remove mode 0, 1, 34, 35, 36. We only do deep learning for angular modes. Mode 34 is removed because i believe mode 34 has the same direction feature as mode 2.
+Remove mode 0, 1, 34, 35, 36. We only do deep learning for angular modes. Mode 34 is removed because mode 34 has the same direction feature as mode 2.
 
 After removing 0, 1, 34, 35, 36:
 
