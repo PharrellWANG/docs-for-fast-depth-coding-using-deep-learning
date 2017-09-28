@@ -16,8 +16,6 @@ why resnet?
 1. easier to train
 2. faster to converge
 
-
-
 .. figure:: _static/basic-resnet-structure.svg
    :width: 600px
    :alt: basic resnet structure
