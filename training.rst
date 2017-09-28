@@ -20,13 +20,13 @@ why resnet?
 
 .. figure:: _static/basic-resnet-structure.svg
    :width: 600px
-   :alt: basic resnet struct
+   :alt: basic resnet structure
 
    Figure 2: Basic Unit of ResNet
 
 .. figure:: _static/our-neural-net-structure.svg
    :width: 320px
-   :alt: our neural net struct
+   :alt: our neural net structure
 
    Figure 3: Our Neural Network Structure
 
