@@ -1,11 +1,35 @@
 Deep Learning
 =============
+
 Download codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
+
+Convolutional Neural Network
+----------------------------
+
+.. figure:: _static/cnn_illustration.svg
+   :width: 800px
+   :alt: CNN illustration
+
+   Figure 1: Convolutional Neural Networks
+
+.. figure:: _static/basic-resnet-structure.svg
+   :width: 600px
+   :alt: basic resnet struct
+
+   Figure 2: Basic Unit of ResNet
+
+.. figure:: _static/our-neural-net-structure.svg
+   :width: 320px
+   :alt: our neural net struct
+
+   Figure 3: Our Neural Network Structure
+
+
+Settings
+--------
 
 - All the models are trained from scratch.
 - Since the datasets for block size 32x32 and size 64x64 are too small, models are not trained for them. Instead, we use Bilinear Interpolation to resize the block to do the prediction for them using learned model for block size 16x16.
-
-**Settings**
 
 1. No padding/cropping/flipping applied. No data augmentation applied. The orignal data is distorted enough by nature. See :ref:`data-visu` section to get a taste.
 2. Momentum optimizer 0.9.

@@ -104,6 +104,8 @@
 <p class="caption"><span class="caption-text">Model Training</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Deep Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#convolutional-neural-network">Convolutional Neural Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#training-for-block-size-4x4">Training for block size 4x4</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#results">Results</a></li>
 </ul>
@@ -200,11 +202,27 @@
   <div class="section" id="deep-learning">
 <h1>Deep Learning<a class="headerlink" href="#deep-learning" title="Permalink to this headline">¶</a></h1>
 <p>Download codebase from GitHub: <a class="reference external" href="https://github.com/PharrellWANG/fdc_resnet_v3">https://github.com/PharrellWANG/fdc_resnet_v3</a></p>
+<div class="section" id="convolutional-neural-network">
+<h2>Convolutional Neural Network<a class="headerlink" href="#convolutional-neural-network" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="_images/cnn_illustration.svg"><img alt="CNN illustration" src="_images/cnn_illustration.svg" width="800px" /></a>
+<p class="caption"><span class="caption-text">Figure 1: Convolutional Neural Networks</span></p>
+</div>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="_images/basic-resnet-structure.svg"><img alt="basic resnet struct" src="_images/basic-resnet-structure.svg" width="600px" /></a>
+<p class="caption"><span class="caption-text">Figure 2: Basic Unit of ResNet</span></p>
+</div>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="_images/our-neural-net-structure.svg"><img alt="our neural net struct" src="_images/our-neural-net-structure.svg" width="320px" /></a>
+<p class="caption"><span class="caption-text">Figure 3: Our Neural Network Structure</span></p>
+</div>
+</div>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>All the models are trained from scratch.</li>
 <li>Since the datasets for block size 32x32 and size 64x64 are too small, models are not trained for them. Instead, we use Bilinear Interpolation to resize the block to do the prediction for them using learned model for block size 16x16.</li>
 </ul>
-<p><strong>Settings</strong></p>
 <ol class="arabic simple">
 <li>No padding/cropping/flipping applied. No data augmentation applied. The orignal data is distorted enough by nature. See <a class="reference internal" href="data-visu.html#data-visu"><span class="std std-ref">Data Visualization</span></a> section to get a taste.</li>
 <li>Momentum optimizer 0.9.</li>
@@ -223,16 +241,17 @@
 <p class="last">Our <strong>deep learning</strong> strategy is targeted to <strong>CU</strong> from <strong>size 8x8</strong> to <strong>size 64x64</strong>,
 both <em>texture</em> and <em>depth</em>.</p>
 </div>
+</div>
 <div class="section" id="training-for-block-size-4x4">
 <h2>Training for block size 4x4<a class="headerlink" href="#training-for-block-size-4x4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="results">
 <h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
 <p>The model <strong>cannot</strong> learn well for size 4x4, only top-28 is fine.</p>
-<div class="figure" id="id3">
+<div class="figure" id="id6">
 <a class="reference internal image-reference" href="_images/blk-4--top-20.png"><img alt="top 20 accuracy for block size 04x04" src="_images/blk-4--top-20.png" style="width: 720px;" /></a>
 <p class="caption"><span class="caption-text">Figure 1.1 Top 20 Accuracy</span></p>
 </div>
-<div class="figure" id="id4">
+<div class="figure" id="id7">
 <a class="reference internal image-reference" href="_images/blk-4--top-28.png"><img alt="top 28 accuracy for block size 04x04" src="_images/blk-4--top-28.png" style="width: 720px;" /></a>
 <p class="caption"><span class="caption-text">Figure 1.2 Top 28 Accuracy</span></p>
 </div>
@@ -244,7 +263,7 @@ both <em>texture</em> and <em>depth</em>.</p>
 <h3>Results<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>The model indeed <strong>can</strong> learn something for size 8x8. Top 16 is fine, which can
 reduce the angular modes by half.</p>
-<div class="figure" id="id5">
+<div class="figure" id="id8">
 <a class="reference internal image-reference" href="_images/blk-8--top-16.png"><img alt="top 16 accuracy for block size 08x08" src="_images/blk-8--top-16.png" style="width: 720px;" /></a>
 <p class="caption"><span class="caption-text">Figure 2.1 Top 16 Accuracy for block size 08x08</span></p>
 </div>
@@ -256,7 +275,7 @@ reduce the angular modes by half.</p>
 <h3>Results<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>The model indeed <strong>can</strong> learn something for size 16x16. Top 16 is fine, which can
 reduce the angular modes by half.</p>
-<div class="figure" id="id6">
+<div class="figure" id="id9">
 <a class="reference internal image-reference" href="_images/blk-16--top-16.png"><img alt="top 16 accuracy for block size 16x16" src="_images/blk-16--top-16.png" style="width: 720px;" /></a>
 <p class="caption"><span class="caption-text">Figure 2.1 Top 16 Accuracy for block size 16x16</span></p>
 </div>
