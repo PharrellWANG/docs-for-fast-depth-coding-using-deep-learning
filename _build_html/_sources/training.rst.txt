@@ -6,21 +6,27 @@ Download codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
 Convolutional Neural Network
 ----------------------------
 
+ConvNet architectures make the explicit assumption that the inputs are images/blocks.
+
 .. figure:: _static/cnn_illustration.svg
    :width: 800px
    :alt: CNN illustration
 
    Figure 1: Convolutional Neural Networks
 
+why resnet?
+1. easier to train
+2. faster to converge
+
 .. figure:: _static/basic-resnet-structure.svg
    :width: 600px
-   :alt: basic resnet struct
+   :alt: basic resnet structure
 
    Figure 2: Basic Unit of ResNet
 
 .. figure:: _static/our-neural-net-structure.svg
    :width: 320px
-   :alt: our neural net struct
+   :alt: our neural net structure
 
    Figure 3: Our Neural Network Structure
 
