@@ -6,6 +6,8 @@ Download codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
 Convolutional Neural Network
 ----------------------------
 
+ConvNet architectures make the explicit assumption that the inputs are images/blocks.
+
 .. figure:: _static/cnn_illustration.svg
    :width: 800px
    :alt: CNN illustration
