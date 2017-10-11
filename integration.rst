@@ -14,8 +14,6 @@ Pre-requisites
 
 2. `Build shared library for using the TensorFlow C++ library <https://github.com/FloopCZ/tensorflow_cc>`_
 
-3. `CMake <https://cmake.org/>`_
-
 .. note:: **Archive/Static library** (.a) VS **Shared library** (.so)
 
          *Archive libraries* (.a) are statically linked i.e when you compile your program with -c option in gcc. So, if there's any change in library, you need to compile and build your code again.
