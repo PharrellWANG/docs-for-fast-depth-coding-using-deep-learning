@@ -31,31 +31,22 @@ There are two Apps in the above project.
 - TAppClassifier
 - TAppEncoder
 
-**TAppClassifier** is the skeleton code that we are using for integration.
+**TAppClassifier** is the skeleton code which can help you understand how to
+load graph in C++ and run the prediction using Tensorflow.
 It is a self-contained c++ Application which can be built from both
 Bazel and CMake.
 
-ResNet engine has been integrated to **TAppEncoder** for depth map angular modes [2, 34] prediction.
+ResNet engine has been integrated to **TAppEncoder** for
+*depth map angular modes [2, 34] prediction* and *the DMM1 searching process*.
 
+For the DMM1 searching process, we are making use of wedgelet slope to reduce
+the number of wedgelet candidates to be evaluated in DMM1 searching process.
+If top-16 is used, then almost half of the candidates will be skipped.
+Hence the time reduction for wedgelet decision shall be reduced roughly by half.
 
-**Todo**
-
-In meeting:
-
-1. ``With All`` Discuss the time cost issue of ResNet neural engine.
-2. propose to implement the resnet on screen content coding.
-    Ask Dr.Tsang how much time it would take for the data collecting algorithm.
-3. ``With Dr.Chan`` Finalize the solution for writing the paper/thesis.
-
-After meeting:
-
-4. ``With Dr.Tsang`` Discuss a method for reducing the wedgelet candidates by making use of the angular predictions from learned deep model.
-5. ``Pharrell.zx`` Run RD experiments after TODO#3 will has been finished.
-6. ``Pharrell.zx`` Try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
-7. ``Pharrell.zx`` Gather the statistics/figures/meterials and write the paper!
-
-.. note:: Why do we have todo#6? Prediction accuracy will be decreased
-            by 2%~3%. But since flops has been reduced from 600k to 130k,
+.. note:: If have time, try to estimate the time cost of ResNet size [4, 4, 8, 16], units 3.
+            Prediction accuracy will be decreased by 2%~3%. But since flops
+            has been reduced from 600k to 130k,
             the speed of prediction in c++ should be faster.
 
 Devices
