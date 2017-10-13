@@ -18,7 +18,6 @@ This documentation is organized into a couple sections:
 * :ref:`codec-integration`
 * :ref:`simulation-results`
 * :ref:`references`
-* :ref:`quick-memo`
 
 .. _proposed-algorithm:
 
@@ -47,7 +46,6 @@ This documentation is organized into a couple sections:
 
    training
 
-
 .. _model-testing:
 
 .. toctree::
@@ -56,7 +54,6 @@ This documentation is organized into a couple sections:
 
    eval-model-08
    eval-model-16
-
 
 .. _codec-integration:
 
@@ -82,13 +79,16 @@ This documentation is organized into a couple sections:
 
    refs.rst
 
+------------------------------------------------------------
+
 .. _quick-memo:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Quick Memo
+   :caption: Appendices
 
-   quick-memo
+   debug-release
+   GPU
 
 
 

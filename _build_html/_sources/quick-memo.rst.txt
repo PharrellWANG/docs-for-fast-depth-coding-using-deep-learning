@@ -1,5 +1,5 @@
-Quick Memo
-==========
+Debug/Release Modes
+===================
 
 Toggle between Debug mode and Release mode
 ------------------------------------------

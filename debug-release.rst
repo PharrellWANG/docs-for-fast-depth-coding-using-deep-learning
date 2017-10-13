@@ -1,8 +1,8 @@
-Quick Memo
-==========
+About Compilation
+=================
 
-Toggle between Debug mode and Release mode
-------------------------------------------
+Debug and Release
+-----------------
 
 - Typically *Release* mode is used to run multiple binaries simultaneously for collecting the data. Speed matters.
 - *Debug* mode is used for inspecting/debugging the codebase. You can stop at breakpoint and check values of vars.
