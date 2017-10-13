@@ -86,8 +86,3 @@ From the encoding results on the first 10 frames of “Newspaper” sequence,
 
 After Simulation
 ----------------
-
-
-
-
-
