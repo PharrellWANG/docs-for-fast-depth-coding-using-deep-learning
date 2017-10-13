@@ -16,9 +16,9 @@ This documentation is organized into a couple sections:
 * :ref:`model-training`
 * :ref:`model-testing`
 * :ref:`codec-integration`
-* :ref:`quick-memo`
 * :ref:`simulation-results`
 * :ref:`references`
+* :ref:`quick-memo`
 
 .. _proposed-algorithm:
 

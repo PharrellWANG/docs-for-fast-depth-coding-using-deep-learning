@@ -18,6 +18,7 @@ This documentation is organized into a couple sections:
 * :ref:`codec-integration`
 * :ref:`quick-memo`
 * :ref:`simulation-results`
+* :ref:`references`
 
 .. _proposed-algorithm:
 
@@ -79,7 +80,7 @@ This documentation is organized into a couple sections:
    :maxdepth: 2
    :caption: References
 
-   references.rst
+   refs.rst
 
 .. _quick-memo:
 
