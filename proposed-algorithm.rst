@@ -2,8 +2,8 @@ Proposed Algorithm
 ==================
 
 In 3D-HEVC, the wedgelet searching process in the depth map coding consumes a
-lot of time. We propose an algorithm in this work to balance the trade-off
-between **coding efficiency** and **computational complexity**
+lot of time. We propose an algorithm in this work to balance the
+trade-off between **coding efficiency** and **computational complexity**
 using deep learning.
 
 Flow Chart
