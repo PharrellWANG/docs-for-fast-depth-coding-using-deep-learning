@@ -62,8 +62,6 @@ The common test condition defined in :cite:`JCT3V-E1105` are used.
 All the sequences are encoded as I-Frame.
 
 
-
-
 Before Simulation
 -----------------
 
@@ -88,6 +86,5 @@ From the encoding results on the first 10 frames of “Newspaper” sequence,
 
 After Simulation
 ----------------
-asdfasdfasdf
 
-.. bibliography:: references.bib
+

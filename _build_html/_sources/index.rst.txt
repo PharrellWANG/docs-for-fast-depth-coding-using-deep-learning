@@ -74,6 +74,13 @@ This documentation is organized into a couple sections:
 
    simu-results.rst
 
+.. _references:
+.. toctree::
+   :maxdepth: 2
+   :caption: References
+
+   references.rst
+
 .. _quick-memo:
 
 .. toctree::
