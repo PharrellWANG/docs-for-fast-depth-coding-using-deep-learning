@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Model trained from size 08x08 &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
+  <title>Model trained from blocks of size 08x08 &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fast Depth Coding Using Deep Learning 0.1.0 documentation" href="index.html"/>
-        <link rel="next" title="Model trained from size 16x16" href="eval-model-16.html"/>
-        <link rel="prev" title="Deep Learning" href="training.html"/> 
+        <link rel="next" title="Model trained from blocks of size 16x16" href="eval-model-16.html"/>
+        <link rel="prev" title="Convolutional Neural Network" href="training.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -92,7 +92,9 @@
             
               <p class="caption"><span class="caption-text">Propose the Algorithm</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Proposed Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Flow Chart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#deprecated-flow-chart">[Deprecated]Flow chart</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Pre-process the Data</span></p>
 <ul>
@@ -103,16 +105,25 @@
 </ul>
 <p class="caption"><span class="caption-text">Train the Model</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="training.html">Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Convolutional Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#settings">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-4x4">Training for blocks of size 4x4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-8x8">Training for blocks of size 8x8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-16x16">Training for blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-32x32">Training for blocks of size 32x32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#id3">Training for blocks of size 32x32</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Evaluate the Model</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Model trained from size 08x08</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model trained from blocks of size 08x08</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#model-performance-on-validating-dataset">Model Performance on Validating Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#model-performance-on-testing-dataset">Model Performance on Testing Dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-16x16">Using blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-32x32">Using blocks of size 32x32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-64x64">Using blocks of size 64x64</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Use the Learned Model</span></p>
 <ul>
@@ -125,11 +136,12 @@
 </ul>
 <p class="caption"><span class="caption-text">References</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refs.html">References</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Quick Memo</span></p>
+<p class="caption"><span class="caption-text">Appendices</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quick-memo.html">Quick Memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug-release.html">About Compilation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPU.html">About GPU</a></li>
 </ul>
 
             
@@ -174,7 +186,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Model trained from size 08x08</li>
+      <li>Model trained from blocks of size 08x08</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,8 +205,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="model-trained-from-size-08x08">
-<h1>Model trained from size 08x08<a class="headerlink" href="#model-trained-from-size-08x08" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="model-trained-from-blocks-of-size-08x08">
+<h1>Model trained from blocks of size 08x08<a class="headerlink" href="#model-trained-from-blocks-of-size-08x08" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This model is trained using the data of size 08x08. It is used
@@ -429,10 +441,10 @@ for the predictions of blocks with size 08x08.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="eval-model-16.html" class="btn btn-neutral float-right" title="Model trained from size 16x16" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="eval-model-16.html" class="btn btn-neutral float-right" title="Model trained from blocks of size 16x16" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="training.html" class="btn btn-neutral" title="Deep Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="training.html" class="btn btn-neutral" title="Convolutional Neural Network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

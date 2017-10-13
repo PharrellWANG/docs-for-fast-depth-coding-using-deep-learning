@@ -1,5 +1,5 @@
-Model trained from size 08x08
-=============================
+Model trained from blocks of size 08x08
+=======================================
 
 .. note:: This model is trained using the data of size 08x08. It is used
             for the predictions of blocks with size 08x08.

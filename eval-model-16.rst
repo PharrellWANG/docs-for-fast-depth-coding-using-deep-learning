@@ -1,5 +1,5 @@
-Model trained from size 16x16
-=============================
+Model trained from blocks of size 16x16
+=======================================
 
 .. note:: This model is trained using the data of size 16x16. But the
             evaluation results clearly proved: this model is applicable to
@@ -30,9 +30,9 @@ Model trained from size 16x16
     396.53125
 
 Using blocks of size 16x16
---------------------------
+==========================
 Model Performance on Validating Dataset
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 Evaluation batch size 100, number of batches 192.
 
 Using validating dataset, the details are documented below:
@@ -76,7 +76,7 @@ Using validating dataset, the details are documented below:
     +----+-----------------+---------------+
 
 Model Performance on Testing Dataset
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 Evaluation batch size 100, number of batches 192.
 
 Using testing dataset, the details are documented below:
@@ -120,7 +120,7 @@ Using testing dataset, the details are documented below:
     +----+-----------------+---------------+
 
 Using blocks of size 32x32
---------------------------
+==========================
 
 We have tried four resizing method:
 
@@ -140,7 +140,7 @@ We have tried four resizing method:
 Evaluation batch size 100, number of batches 192.
 
 Performance with Bilinear Interpolation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 Using validating dataset, with Bilinear interpolation,
 the details are documented below:
@@ -184,32 +184,32 @@ the details are documented below:
     +----+-----------------+---------------+
 
 Performance with Nearest Neighbor Interpolation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
 
 Almost the same performance as using Linear Interpolation!
 Omitted here for clarity.
 
 Performance with Bicubic Interpolation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 Almost the same performance as using Linear Interpolation!
 Omitted here for clarity.
 
 Performance with Area Interpolation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 Almost the same performance as using Linear Interpolation!
 Omitted here for clarity.
 
 Using blocks of size 64x64
---------------------------
+==========================
 
 Based on the observations of the testing results of block size 32x32, we believe there should not be such differences among different interpolation method.
 
 Here we only use **Bilinear Interpolation**.
 
 Performance with Bilinear Interpolation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 Using validating dataset, with Bilinear interpolation,
 the details are documented below:

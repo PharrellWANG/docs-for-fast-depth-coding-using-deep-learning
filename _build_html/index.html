@@ -36,7 +36,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fast Depth Coding Using Deep Learning 0.1.0 documentation" href="#"/>
-        <link rel="next" title="Proposed Algorithm" href="proposed-algorithm.html"/> 
+        <link rel="next" title="Flow Chart" href="proposed-algorithm.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -91,7 +91,9 @@
             
               <p class="caption"><span class="caption-text">Propose the Algorithm</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Proposed Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Flow Chart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#deprecated-flow-chart">[Deprecated]Flow chart</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Pre-process the Data</span></p>
 <ul>
@@ -102,12 +104,21 @@
 </ul>
 <p class="caption"><span class="caption-text">Train the Model</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="training.html">Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Convolutional Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#settings">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-4x4">Training for blocks of size 4x4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-8x8">Training for blocks of size 8x8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-16x16">Training for blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-32x32">Training for blocks of size 32x32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#id3">Training for blocks of size 32x32</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Evaluate the Model</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from size 08x08</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from blocks of size 08x08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-16x16">Using blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-32x32">Using blocks of size 32x32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-64x64">Using blocks of size 64x64</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Use the Learned Model</span></p>
 <ul>
@@ -206,110 +217,53 @@ The details of the implementation are documented here for reference.</p>
 <div class="toctree-wrapper compound" id="proposed-algorithm">
 <p class="caption"><span class="caption-text">Propose the Algorithm</span><a class="headerlink" href="#proposed-algorithm" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Proposed Algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="proposed-algorithm.html#flow-chart">Flow Chart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="proposed-algorithm.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="proposed-algorithm.html#deprecated-flow-chart">[Deprecated]Flow chart</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Flow Chart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#deprecated-flow-chart">[Deprecated]Flow chart</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="data-processing">
 <p class="caption"><span class="caption-text">Pre-process the Data</span><a class="headerlink" href="#data-processing" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="data-collection.html">Data Collection</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data-collection.html#training-data-source">Training Data Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-collection.html#method-for-collecting-the-data">Method for Collecting the data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-collection.html#effort-from-ho">Effort from Ho</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-1-merging">Step 1 Merging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-2-removing-some-modes">Step 2 Removing some modes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-3-removing-smooth-blocks">Step 3 Removing Smooth Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-4-imbalanced-learning">Step 4 Imbalanced Learning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#step-5-tagging">Step 5 Tagging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-statistics.html#final-data-description">Final Data Description</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data-visu.html">Data Visualization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data-visu.html#summary">Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-visu.html#memo">Memo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-visu.html#intra-modes-in-hevc">Intra modes in HEVC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-visu.html#examples-for-block-size-8x8">Examples for block size 8x8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-visu.html#examples-for-block-size-16x16">Examples for block size 16x16</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-visu.html#examples-for-block-size-32x32">Examples for block size 32x32</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-visu.html#examples-for-block-size-64x64">Examples for block size 64x64</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="edge-strength-analysis.html">Edge Strength Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="edge-strength-analysis.html#motivation-originated-from-experience">Motivation originated from experience</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="edge-strength-analysis.html#confusion-matrix-obtained-during-training-process">Confusion matrix obtained during training process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="edge-strength-analysis.html#statistics">Statistics</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="edge-strength-analysis.html#algorithm-designed-for-edge-analysis">Algorithm designed for edge analysis</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="data-collection.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-statistics.html">Processing Steps and Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visu.html">Data Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edge-strength-analysis.html">Edge Strength Analysis</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="model-training">
 <p class="caption"><span class="caption-text">Train the Model</span><a class="headerlink" href="#model-training" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="training.html">Deep Learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="training.html#convolutional-neural-network">Convolutional Neural Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="training.html#settings">Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="training.html#training-for-block-size-4x4">Training for block size 4x4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="training.html#training-for-block-size-8x8">Training for block size 8x8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="training.html#training-for-block-size-16x16">Training for block size 16x16</a></li>
-<li class="toctree-l2"><a class="reference internal" href="training.html#training-for-block-size-32x32">Training for block size 32x32</a></li>
-<li class="toctree-l2"><a class="reference internal" href="training.html#training-for-block-size-64x64">Training for block size 64x64</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Convolutional Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#settings">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-4x4">Training for blocks of size 4x4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-8x8">Training for blocks of size 8x8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-16x16">Training for blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-32x32">Training for blocks of size 32x32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#id3">Training for blocks of size 32x32</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="model-testing">
 <p class="caption"><span class="caption-text">Evaluate the Model</span><a class="headerlink" href="#model-testing" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from size 08x08</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eval-model-08.html#model-performance-on-validating-dataset">Model Performance on Validating Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eval-model-08.html#model-performance-on-testing-dataset">Model Performance on Testing Dataset</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from size 16x16</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-16x16">Using blocks of size 16x16</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-32x32">Using blocks of size 32x32</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-64x64">Using blocks of size 64x64</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from blocks of size 08x08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html">Model trained from blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-16x16">Using blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-32x32">Using blocks of size 32x32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval-model-16.html#using-blocks-of-size-64x64">Using blocks of size 64x64</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="codec-integration">
 <p class="caption"><span class="caption-text">Use the Learned Model</span><a class="headerlink" href="#codec-integration" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tf-speed.html">Time Cost of TF in C++</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tf-speed.html#motivation">Motivation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tf-speed.html#experiments">Experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tf-speed.html#conclusions">Conclusions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="integration.html">Encoder Integration in C++</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="integration.html#pre-requisites">Pre-requisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration.html#integrate-the-model-into-htm">Integrate the model into HTM</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="tf-speed.html">Time Cost of TF in C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">Encoder Integration in C++</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="simulation-results">
 <p class="caption"><span class="caption-text">Simulation Results</span><a class="headerlink" href="#simulation-results" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="simu-results.html">Simulation Results</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="simu-results.html#simulation-environments">Simulation Environments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simu-results.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simu-results.html#before-simulation">Before Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simu-results.html#after-simulation">After Simulation</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="simu-results.html">Simulation Results</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="references">
@@ -322,18 +276,8 @@ The details of the implementation are documented here for reference.</p>
 <div class="toctree-wrapper compound" id="quick-memo">
 <p class="caption"><span class="caption-text">Appendices</span><a class="headerlink" href="#quick-memo" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="debug-release.html">About Compilation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="debug-release.html#debug-and-release">Debug and Release</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="GPU.html">About GPU</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="GPU.html#nvidia-vs-amd">NVIDIA vs AMD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPU.html#gpu-accelerated-computing">GPU-Accelerated Computing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPU.html#performance">Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPU.html#cuda-and-cudnn">CUDA and cuDNN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPU.html#computation-capabilities-of-cuda-gpus">Computation Capabilities of CUDA GPUs</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="debug-release.html">About Compilation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPU.html">About GPU</a></li>
 </ul>
 </div>
 </div>
@@ -348,7 +292,7 @@ The details of the implementation are documented here for reference.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="proposed-algorithm.html" class="btn btn-neutral float-right" title="Proposed Algorithm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="proposed-algorithm.html" class="btn btn-neutral float-right" title="Flow Chart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

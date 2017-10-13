@@ -1,13 +1,9 @@
-Proposed Algorithm
-==================
-
+Flow Chart
+==========
 In 3D-HEVC, the wedgelet searching process in the depth map coding consumes a
 lot of time. We propose an algorithm in this work to balance the
 trade-off between **coding efficiency** and **computational complexity**
 using deep learning.
-
-Flow Chart
-----------
 
 .. figure:: _static/Proposed-Intra-Mode-Decision-Flowchart.svg
    :width: 1000px
@@ -16,7 +12,7 @@ Flow Chart
    Figure 1: Flowchart for Proposed Algorithm
 
 Description
------------
+===========
 
 ``step 1`` Get the Luma pixel values from one depth block.
 (The block can be of size 8x8, 16x16, 32x32)
@@ -44,7 +40,7 @@ getting the **top-16 predictions**.
 
 
 [Deprecated]Flow chart
-----------------------
+======================
 
 This chart has been deprecated. Kept here only for reference.
 

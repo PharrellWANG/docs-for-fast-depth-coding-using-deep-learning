@@ -22,7 +22,7 @@ This documentation is organized into a couple sections:
 .. _proposed-algorithm:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Propose the Algorithm
 
    proposed-algorithm
@@ -30,7 +30,7 @@ This documentation is organized into a couple sections:
 .. _data-processing:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Pre-process the Data
 
    data-collection
@@ -41,7 +41,7 @@ This documentation is organized into a couple sections:
 .. _model-training:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Train the Model
 
    training
@@ -49,7 +49,7 @@ This documentation is organized into a couple sections:
 .. _model-testing:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Evaluate the Model
 
    eval-model-08
@@ -58,7 +58,7 @@ This documentation is organized into a couple sections:
 .. _codec-integration:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Use the Learned Model
 
    tf-speed
@@ -67,14 +67,14 @@ This documentation is organized into a couple sections:
 .. _simulation-results:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Simulation Results
 
    simu-results.rst
 
 .. _references:
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: References
 
    refs.rst
@@ -84,7 +84,7 @@ This documentation is organized into a couple sections:
 .. _quick-memo:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Appendices
 
    debug-release

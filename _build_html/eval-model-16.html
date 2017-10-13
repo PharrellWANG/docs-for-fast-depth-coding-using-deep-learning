@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Model trained from size 16x16 &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
+  <title>Model trained from blocks of size 16x16 &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
   
 
   
@@ -92,7 +92,9 @@
             
               <p class="caption"><span class="caption-text">Propose the Algorithm</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Proposed Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html">Flow Chart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposed-algorithm.html#deprecated-flow-chart">[Deprecated]Flow chart</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Pre-process the Data</span></p>
 <ul>
@@ -103,28 +105,32 @@
 </ul>
 <p class="caption"><span class="caption-text">Train the Model</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="training.html">Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Convolutional Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#settings">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-4x4">Training for blocks of size 4x4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-8x8">Training for blocks of size 8x8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-16x16">Training for blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#training-for-blocks-of-size-32x32">Training for blocks of size 32x32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html#id3">Training for blocks of size 32x32</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Evaluate the Model</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="eval-model-08.html">Model trained from size 08x08</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Model trained from size 16x16</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#using-blocks-of-size-16x16">Using blocks of size 16x16</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#model-performance-on-validating-dataset">Model Performance on Validating Dataset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#model-performance-on-testing-dataset">Model Performance on Testing Dataset</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model trained from blocks of size 16x16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-blocks-of-size-16x16">Using blocks of size 16x16</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#model-performance-on-validating-dataset">Model Performance on Validating Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#model-performance-on-testing-dataset">Model Performance on Testing Dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#using-blocks-of-size-32x32">Using blocks of size 32x32</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#performance-with-bilinear-interpolation">Performance with Bilinear Interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#performance-with-nearest-neighbor-interpolation">Performance with Nearest Neighbor Interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#performance-with-bicubic-interpolation">Performance with Bicubic Interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#performance-with-area-interpolation">Performance with Area Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-blocks-of-size-32x32">Using blocks of size 32x32</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#performance-with-bilinear-interpolation">Performance with Bilinear Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#performance-with-nearest-neighbor-interpolation">Performance with Nearest Neighbor Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#performance-with-bicubic-interpolation">Performance with Bicubic Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#performance-with-area-interpolation">Performance with Area Interpolation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#using-blocks-of-size-64x64">Using blocks of size 64x64</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Performance with Bilinear Interpolation</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="#using-blocks-of-size-64x64">Using blocks of size 64x64</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Performance with Bilinear Interpolation</a></li>
 </ul>
 </li>
 </ul>
@@ -139,11 +145,12 @@
 </ul>
 <p class="caption"><span class="caption-text">References</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refs.html">References</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Quick Memo</span></p>
+<p class="caption"><span class="caption-text">Appendices</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quick-memo.html">Quick Memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug-release.html">About Compilation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPU.html">About GPU</a></li>
 </ul>
 
             
@@ -188,7 +195,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Model trained from size 16x16</li>
+      <li>Model trained from blocks of size 16x16</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -207,8 +214,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="model-trained-from-size-16x16">
-<h1>Model trained from size 16x16<a class="headerlink" href="#model-trained-from-size-16x16" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="model-trained-from-blocks-of-size-16x16">
+<h1>Model trained from blocks of size 16x16<a class="headerlink" href="#model-trained-from-blocks-of-size-16x16" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This model is trained using the data of size 16x16. But the
@@ -257,10 +264,11 @@ resizing for the larger blocks.</p>
 <span class="go">396.53125</span>
 </pre></div>
 </div>
+</div>
 <div class="section" id="using-blocks-of-size-16x16">
-<h2>Using blocks of size 16x16<a class="headerlink" href="#using-blocks-of-size-16x16" title="Permalink to this headline">¶</a></h2>
+<h1>Using blocks of size 16x16<a class="headerlink" href="#using-blocks-of-size-16x16" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="model-performance-on-validating-dataset">
-<h3>Model Performance on Validating Dataset<a class="headerlink" href="#model-performance-on-validating-dataset" title="Permalink to this headline">¶</a></h3>
+<h2>Model Performance on Validating Dataset<a class="headerlink" href="#model-performance-on-validating-dataset" title="Permalink to this headline">¶</a></h2>
 <p>Evaluation batch size 100, number of batches 192.</p>
 <p>Using validating dataset, the details are documented below:</p>
 <blockquote>
@@ -348,7 +356,7 @@ resizing for the larger blocks.</p>
 </div></blockquote>
 </div>
 <div class="section" id="model-performance-on-testing-dataset">
-<h3>Model Performance on Testing Dataset<a class="headerlink" href="#model-performance-on-testing-dataset" title="Permalink to this headline">¶</a></h3>
+<h2>Model Performance on Testing Dataset<a class="headerlink" href="#model-performance-on-testing-dataset" title="Permalink to this headline">¶</a></h2>
 <p>Evaluation batch size 100, number of batches 192.</p>
 <p>Using testing dataset, the details are documented below:</p>
 <blockquote>
@@ -437,7 +445,7 @@ resizing for the larger blocks.</p>
 </div>
 </div>
 <div class="section" id="using-blocks-of-size-32x32">
-<h2>Using blocks of size 32x32<a class="headerlink" href="#using-blocks-of-size-32x32" title="Permalink to this headline">¶</a></h2>
+<h1>Using blocks of size 32x32<a class="headerlink" href="#using-blocks-of-size-32x32" title="Permalink to this headline">¶</a></h1>
 <p>We have tried four resizing method:</p>
 <ol class="arabic simple">
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Bilinear_interpolation">Bilinear interpolation</a>.</li>
@@ -453,7 +461,7 @@ no need for anther <code class="docutils literal"><span class="pre">test_32x32.c
 </div>
 <p>Evaluation batch size 100, number of batches 192.</p>
 <div class="section" id="performance-with-bilinear-interpolation">
-<h3>Performance with Bilinear Interpolation<a class="headerlink" href="#performance-with-bilinear-interpolation" title="Permalink to this headline">¶</a></h3>
+<h2>Performance with Bilinear Interpolation<a class="headerlink" href="#performance-with-bilinear-interpolation" title="Permalink to this headline">¶</a></h2>
 <p>Using validating dataset, with Bilinear interpolation,
 the details are documented below:</p>
 <blockquote>
@@ -541,27 +549,27 @@ the details are documented below:</p>
 </div></blockquote>
 </div>
 <div class="section" id="performance-with-nearest-neighbor-interpolation">
-<h3>Performance with Nearest Neighbor Interpolation<a class="headerlink" href="#performance-with-nearest-neighbor-interpolation" title="Permalink to this headline">¶</a></h3>
+<h2>Performance with Nearest Neighbor Interpolation<a class="headerlink" href="#performance-with-nearest-neighbor-interpolation" title="Permalink to this headline">¶</a></h2>
 <p>Almost the same performance as using Linear Interpolation!
 Omitted here for clarity.</p>
 </div>
 <div class="section" id="performance-with-bicubic-interpolation">
-<h3>Performance with Bicubic Interpolation<a class="headerlink" href="#performance-with-bicubic-interpolation" title="Permalink to this headline">¶</a></h3>
+<h2>Performance with Bicubic Interpolation<a class="headerlink" href="#performance-with-bicubic-interpolation" title="Permalink to this headline">¶</a></h2>
 <p>Almost the same performance as using Linear Interpolation!
 Omitted here for clarity.</p>
 </div>
 <div class="section" id="performance-with-area-interpolation">
-<h3>Performance with Area Interpolation<a class="headerlink" href="#performance-with-area-interpolation" title="Permalink to this headline">¶</a></h3>
+<h2>Performance with Area Interpolation<a class="headerlink" href="#performance-with-area-interpolation" title="Permalink to this headline">¶</a></h2>
 <p>Almost the same performance as using Linear Interpolation!
 Omitted here for clarity.</p>
 </div>
 </div>
 <div class="section" id="using-blocks-of-size-64x64">
-<h2>Using blocks of size 64x64<a class="headerlink" href="#using-blocks-of-size-64x64" title="Permalink to this headline">¶</a></h2>
+<h1>Using blocks of size 64x64<a class="headerlink" href="#using-blocks-of-size-64x64" title="Permalink to this headline">¶</a></h1>
 <p>Based on the observations of the testing results of block size 32x32, we believe there should not be such differences among different interpolation method.</p>
 <p>Here we only use <strong>Bilinear Interpolation</strong>.</p>
 <div class="section" id="id1">
-<h3>Performance with Bilinear Interpolation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2>Performance with Bilinear Interpolation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Using validating dataset, with Bilinear interpolation,
 the details are documented below:</p>
 <p>Total samples: 1728</p>
@@ -653,7 +661,6 @@ the details are documented below:</p>
 </tbody>
 </table>
 </div></blockquote>
-</div>
 </div>
 </div>
 

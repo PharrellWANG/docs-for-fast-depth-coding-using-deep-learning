@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Proposed Algorithm &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
+  <title>Flow Chart &mdash; Fast Depth Coding Using Deep Learning 0.1.0 documentation</title>
   
 
   
@@ -92,12 +92,9 @@
             
               <p class="caption"><span class="caption-text">Propose the Algorithm</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Proposed Algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#flow-chart">Flow Chart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#deprecated-flow-chart">[Deprecated]Flow chart</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flow Chart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#deprecated-flow-chart">[Deprecated]Flow chart</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Pre-process the Data</span></p>
 <ul>
@@ -176,7 +173,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Proposed Algorithm</li>
+      <li>Flow Chart</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -195,21 +192,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="proposed-algorithm">
-<h1>Proposed Algorithm<a class="headerlink" href="#proposed-algorithm" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="flow-chart">
+<h1>Flow Chart<a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h1>
 <p>In 3D-HEVC, the wedgelet searching process in the depth map coding consumes a
 lot of time. We propose an algorithm in this work to balance the
 trade-off between <strong>coding efficiency</strong> and <strong>computational complexity</strong>
 using deep learning.</p>
-<div class="section" id="flow-chart">
-<h2>Flow Chart<a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id1">
 <a class="reference internal image-reference" href="_images/Proposed-Intra-Mode-Decision-Flowchart.svg"><img alt="proposed fast intra mode decision algorithm" src="_images/Proposed-Intra-Mode-Decision-Flowchart.svg" width="1000px" /></a>
 <p class="caption"><span class="caption-text">Figure 1: Flowchart for Proposed Algorithm</span></p>
 </div>
 </div>
 <div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal"><span class="pre">step</span> <span class="pre">1</span></code> Get the Luma pixel values from one depth block.
 (The block can be of size 8x8, 16x16, 32x32)</p>
 <p><code class="docutils literal"><span class="pre">step</span> <span class="pre">2</span></code> Feed the 2D matrix of Luma pixels into <strong>learned model</strong> for
@@ -230,7 +225,7 @@ For details, see <a class="reference internal" href="tf-speed.html#time-cost-ana
 </div>
 </div>
 <div class="section" id="deprecated-flow-chart">
-<h2>[Deprecated]Flow chart<a class="headerlink" href="#deprecated-flow-chart" title="Permalink to this headline">¶</a></h2>
+<h1>[Deprecated]Flow chart<a class="headerlink" href="#deprecated-flow-chart" title="Permalink to this headline">¶</a></h1>
 <p>This chart has been deprecated. Kept here only for reference.</p>
 <p><strong>Deprecation Summary</strong></p>
 <ul class="simple">
@@ -246,7 +241,6 @@ For details, see <a class="reference internal" href="tf-speed.html#time-cost-ana
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="_images/deprecated-Proposed-Intra-Mode-Decision-Flowchart.svg"><img alt="deprecated proposed fast intra mode decision algorithm" src="_images/deprecated-Proposed-Intra-Mode-Decision-Flowchart.svg" width="600px" /></a>
 <p class="caption"><span class="caption-text">Figure D-1: Flowchart for Proposed Fast Intra Mode Decision Algorithm</span></p>
-</div>
 </div>
 </div>
 

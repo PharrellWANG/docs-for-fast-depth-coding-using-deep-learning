@@ -1,10 +1,6 @@
-Deep Learning
-=============
-
-Download codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
-
 Convolutional Neural Network
-----------------------------
+============================
+Download codebase from GitHub: https://github.com/PharrellWANG/fdc_resnet_v3
 
 ConvNet architectures make the explicit assumption that the inputs are images/blocks.
 
@@ -32,7 +28,7 @@ why resnet?
 
 
 Settings
---------
+========
 
 - All the models are trained from scratch.
 - Since the datasets for block size 32x32 and size 64x64 are too small, models are not trained for them. Instead, we use Bilinear Interpolation to resize the block to do the prediction for them using learned model for block size 16x16.
@@ -52,11 +48,11 @@ Settings
         Our **deep learning** strategy is targeted to **CU** from **size 8x8** to **size 64x64**,
         both *texture* and *depth*.
 
-Training for block size 4x4
----------------------------
+Training for blocks of size 4x4
+===============================
 
 Results
-~~~~~~~
+-------
 The model **cannot** learn well for size 4x4, only top-28 is fine.
 
 .. figure:: images/blk-4--top-20.png
@@ -73,11 +69,11 @@ The model **cannot** learn well for size 4x4, only top-28 is fine.
    Figure 1.2 Top 28 Accuracy
 
 
-Training for block size 8x8
----------------------------
+Training for blocks of size 8x8
+===============================
 
 Results
-~~~~~~~
+-------
 The model indeed **can** learn something for size 8x8. Top 16 is fine, which can
 reduce the angular modes by half.
 
@@ -88,11 +84,11 @@ reduce the angular modes by half.
    Figure 2.1 Top 16 Accuracy for block size 08x08
 
 
-Training for block size 16x16
------------------------------
+Training for blocks of size 16x16
+=================================
 
 Results
-~~~~~~~
+-------
 The model indeed **can** learn something for size 16x16. Top 16 is fine, which can
 reduce the angular modes by half.
 
@@ -102,14 +98,14 @@ reduce the angular modes by half.
 
    Figure 2.1 Top 16 Accuracy for block size 16x16
 
-Training for block size 32x32
------------------------------
+Training for blocks of size 32x32
+=================================
 Dataset obtained after pre-processing is too small for using deep learning
 to train a model. We use Bilinear Interpolation to resize the block to
 employ model trained for size 16x16.
 
-Training for block size 64x64
------------------------------
+Training for blocks of size 32x32
+=================================
 Dataset obtained after pre-processing is too small for using deep learning
 to train a model. We use Bilinear Interpolation to resize the block to
 employ model trained for size 16x16.
