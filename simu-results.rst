@@ -57,7 +57,7 @@ are used for simulation:
 
 Configuration
 -------------
-The common test condition defined in :cite:`JCT3V-E1105` are used.
+The common test condition defined in [CE5]_ are used.
 
 All the sequences are encoded as I-Frame.
 
@@ -86,5 +86,8 @@ From the encoding results on the first 10 frames of “Newspaper” sequence,
 
 After Simulation
 ----------------
+
+
+
 
 

@@ -38,7 +38,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 extensions = ['sphinx.ext.todo',
               'sphinx.ext.imgmath',
               'sphinx.ext.githubpages',
-              'sphinxcontrib.bibtex']
+              ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
