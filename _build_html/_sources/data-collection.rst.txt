@@ -5,6 +5,8 @@ This document will show you how to collect the data.
 
 The source code of the project for processing the data is in GitHub: https://github.com/PharrellWANG/data-processing-for-fdc
 
+.. _data-collected-four-seqs:
+
 Training Data Source
 --------------------
 **We collect the data by encoding the video sequences.**

@@ -47,25 +47,25 @@ Hence the time reduction for wedgelet decision shall be reduced roughly by half.
             has been reduced from 600k to 130k,
             the speed of prediction in c++ should be faster.
 
-Devices
--------
-.. figure:: images/devices.JPG
+.. Devices
+.. -------
+.. .. figure:: images/devices.JPG
    :width: 300px
    :alt: Devices
 
-   Devices for this project
+   .. Devices for this project
 
-Device for Data Processing
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-- **iMac (21.5-inch 2017)**
-- Processor 3GHz Intel Core i5
-- Memory 8GB 2400 MHz DDR4
+.. Device for Data Processing
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. - **iMac (21.5-inch 2017)**
+.. - Processor 3GHz Intel Core i5
+.. - Memory 8GB 2400 MHz DDR4
 
-Device for Training Models
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-- **Macbook Pro (15-inch, Mid 2015)**
-- Processor 2.2GHz Intel Core i7
-- Memory 16GB 1600MHz DDR3
-- Nvidia GTX980, Memory 4GB (External GPU)
+.. Device for Training Models
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. - **Macbook Pro (15-inch, Mid 2015)**
+.. - Processor 2.2GHz Intel Core i7
+.. - Memory 16GB 1600MHz DDR3
+.. - Nvidia GTX980, Memory 4GB (External GPU)
 
-Thank you for reading.
+.. Thank you for reading.

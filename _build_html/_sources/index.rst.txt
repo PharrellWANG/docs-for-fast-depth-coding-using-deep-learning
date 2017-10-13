@@ -17,12 +17,13 @@ This documentation is organized into a couple sections:
 * :ref:`model-testing`
 * :ref:`codec-integration`
 * :ref:`quick-memo`
+* :ref:`simulation-results`
 
 .. _proposed-algorithm:
 
 .. toctree::
    :maxdepth: 3
-   :caption: Proposed Algorithm
+   :caption: Propose the Algorithm
 
    proposed-algorithm
 
@@ -30,7 +31,7 @@ This documentation is organized into a couple sections:
 
 .. toctree::
    :maxdepth: 3
-   :caption: Data Processing
+   :caption: Pre-process the Data
 
    data-collection
    data-statistics
@@ -41,7 +42,7 @@ This documentation is organized into a couple sections:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Model Training
+   :caption: Train the Model
 
    training
 
@@ -50,7 +51,7 @@ This documentation is organized into a couple sections:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Model Evaluating
+   :caption: Evaluate the Model
 
    eval-model-08
    eval-model-16
@@ -60,10 +61,18 @@ This documentation is organized into a couple sections:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Encoder Integration
+   :caption: Use the Learned Model
 
    tf-speed
    integration
+
+.. _simulation-results:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Simulation Results
+
+   simu-results.rst
 
 .. _quick-memo:
 
