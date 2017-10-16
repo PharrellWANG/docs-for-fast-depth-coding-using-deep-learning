@@ -104,7 +104,7 @@ Dataset obtained after pre-processing is too small for using deep learning
 to train a model. We use Bilinear Interpolation to resize the block to
 employ model trained for size 16x16.
 
-Training for blocks of size 32x32
+Training for blocks of size 64x64
 =================================
 Dataset obtained after pre-processing is too small for using deep learning
 to train a model. We use Bilinear Interpolation to resize the block to
