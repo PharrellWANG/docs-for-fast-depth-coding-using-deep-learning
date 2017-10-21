@@ -14,6 +14,11 @@ the form of the **Table of Contents**.
 
 - List of Figures (shall not be shown in TOC)
 
+- Abbreviations (shall not be shown in TOC)
+
+    - DPCM
+    -
+
 - Introduction
 
     - Motivation and the Proposed Algorithm
