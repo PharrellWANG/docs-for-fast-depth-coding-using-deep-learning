@@ -16,9 +16,6 @@ the form of the **Table of Contents**.
 
 - Abbreviations (shall not be shown in TOC)
 
-    - DPCM
-    -
-
 - Introduction
 
     - Motivation and the Proposed Algorithm
