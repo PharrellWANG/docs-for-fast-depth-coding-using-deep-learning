@@ -10,9 +10,13 @@ the form of the **Table of Contents**.
 
 - Acknowledgements
 
+- List of Tables (shall not be shown in TOC)
+
+- List of Figures (shall not be shown in TOC)
+
 - Introduction
 
-    - Motivation
+    - Motivation and the Proposed Algorithm
     - Contributions and Organization of the Following Chapters
 
 - Background
