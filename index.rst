@@ -90,5 +90,15 @@ This documentation is organized into a couple sections:
    debug-release
    GPU
 
+------------------------------------------------------------
+
+.. _thesis-outline:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Thesis Outline
+
+   thesis-outline
+
 
 
