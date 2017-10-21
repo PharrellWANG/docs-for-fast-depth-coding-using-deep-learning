@@ -12,7 +12,14 @@ the form of the **Table of Contents**.
 
 - Introduction
 
+    - Motivation
+    - Contributions and Organization of the Following Chapters
+
 - Background
+
+    - Video Coding
+    - Deep Learning
+    - Related Work
 
 - Prepare the Data for Deep Learning
 
@@ -41,12 +48,19 @@ the form of the **Table of Contents**.
         - Evaluate the Deep Model on blocks of size 16x16
         - Evaluate the Deep Model on blocks of size 32x32
 
+    - Discussion
+    - Conclusion
+
 - Employ the Learned Deep Model
 
     - Introduction
     - The Analysis and Optimisation for the Time of Prediction
     - The Integration of the Learned Model
     - Simulation Results
+    - Discussion
+    - Conclusion
+
+- Conclusion
 
 - Bibliography
 
