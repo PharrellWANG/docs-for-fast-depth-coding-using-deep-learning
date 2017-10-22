@@ -72,15 +72,6 @@ This documentation is organized into a couple sections:
 
    simu-results.rst
 
-.. _references:
-.. toctree::
-   :maxdepth: 1
-   :caption: References
-
-   refs.rst
-
-------------------------------------------------------------
-
 .. _quick-memo:
 
 .. toctree::
@@ -89,16 +80,12 @@ This documentation is organized into a couple sections:
 
    debug-release
    GPU
+   thesis-outline
+   how-to-write-thesis
 
-------------------------------------------------------------
-
-.. _thesis-outline:
-
+.. _references:
 .. toctree::
    :maxdepth: 1
-   :caption: Thesis Outline
+   :caption: References
 
-   thesis-outline
-
-
-
+   refs.rst

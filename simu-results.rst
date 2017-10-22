@@ -7,7 +7,7 @@ the reference software of 3D-HEVC).
 Several simulations are carried out to further evaluate the
 performance of the proposed algorithm.
 
-**BD-BR** and **BD-PSNR** metrics [BJD]_ are employed.
+**BD-BR** and **BD-PSNR** metrics [REF2]_ are employed.
 
 Simulation Environments
 -----------------------
@@ -57,7 +57,7 @@ are used for simulation:
 
 Configuration
 -------------
-The common test condition defined in [CE5]_ are used.
+The common test condition defined in [REF1]_ are used.
 
 All the sequences are encoded as I-Frame.
 

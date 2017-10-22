@@ -1,8 +1,6 @@
 Thesis Outline
 ==============
 
-Possible TABLE OF CONTENTS
---------------------------
 This section I am trying to figure out the best outline for the thesis in
 the form of the **Table of Contents**.
 
