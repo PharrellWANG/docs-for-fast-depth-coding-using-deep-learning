@@ -5,16 +5,21 @@ PSNR and bitrate are two important metrics to obtain the BDBR, BDPSNR which
 are two common criteria for measuring the average PSNR differences between
 RD-curves.
 
-How to obtain the PSNR
-~~~~~~~~~~~~~~~~~~~~~~
+**step 1**
 
-Firstly, we need to render the views for both baseline and proposed algorithm
-for obtaining synthesized views.
+use ``TAppRenderer`` to synthesize intermediate views using
 
-After the synthesized views will be obtained, we use them to calculate the PSNR.
+    - original YUVs
+    - (four QPs) the YUVs obtained by your method
+    - (four QPs) the YUVs obtained by standard method (or any other method that you want to compare with)
 
-https://github.com/PharrellWANG/PSNR
+separately.
 
-How to obtain the BDBR BDPSNR
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-https://github.com/PharrellWANG/Bjontegaard-Metrics
+**step 2**
+
+1. (four QPs) Calculate PSNR using [synthesized_views_from_origin, synthesized_views_from_your_method]
+2. (four QPs) Calculate PSNR using [synthesized_views_from_origin, synthesized_views_from_ref_method]
+
+**step 3**
+
+calculate BD-BR, BD-PSNR for each sequence.
