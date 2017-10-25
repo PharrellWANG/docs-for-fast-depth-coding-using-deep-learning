@@ -62,44 +62,21 @@ The common test condition defined in [REF1]_ are used.
 All the sequences are encoded as I-Frame.
 
 
-Before Simulation
------------------
+Simulation Results
+------------------
 
-How much encoding time can be saved?
+.. _figure1.1:
+.. figure:: ./images/delta_t_DMM1.png
+   :scale: 50 %
+   :alt: session_one
+   :align: center
 
-.. note:: Simulation process consumes plenty of time. Before the obtain of
-        the simulation results, we can have a quick feel of how much time
-        we can save.
+   Figure 1. Time Saving for DMM1 Wedgelet Searching and Coding Performance of the Proposed Method
 
-From the encoding results on the first 10 frames of “Newspaper” sequence,
+.. _figure1.2:
+.. figure:: ./images/delta_t_encode.png
+   :scale: 50 %
+   :alt: session_one
+   :align: center
 
-- Time saved for total encoding:  **21.13 %**
-
->>> (1203.47-949.194)/1203.47
-0.2112856988541468
-
-
-- Time saved for DMM1 searching:  **59.36 %**
-
->>> (318.284-129.364)/318.284
-0.5935579545311734
-
-After Simulation
-----------------
-
-
-        +---------------+---------------------------------------+
-        |               |            Proposed                   |
-        |               +-------------------+--------+----------+
-        |               |   Time Saving (%) |        |          |
-        +-----------+---+----+----+----+----+  BD-BR +  BD-PSNR +
-        |Sequences  |QP | 34 | 39 | 42 | 45 |        |          |
-        +-----------+---+----+----+----+----+--------+----------+
-        |Newspaper      |    |    |    |    |        |          |
-        +---------------+----+----+----+----+--------+----------+
-        |GhostTownFly   |    |    |    |    |        |          |
-        +---------------+----+----+----+----+--------+----------+
-        |PoznanHall2    |    |    |    |    |        |          |
-        +---------------+----+----+----+----+--------+----------+
-        |Shark          |    |    |    |    |        |          |
-        +---------------+----+----+----+----+--------+----------+
+   Figure 1. Time Saving for the total encoding process and Coding Performance of the Proposed Method

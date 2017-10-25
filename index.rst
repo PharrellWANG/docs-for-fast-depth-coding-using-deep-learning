@@ -82,7 +82,7 @@ This documentation is organized into a couple sections:
    GPU
    thesis-outline
    how-to-write-thesis
-   metrics-howto
+   bd-br-bd-psnr
 
 .. _references:
 .. toctree::

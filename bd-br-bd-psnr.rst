@@ -1,5 +1,5 @@
-Metrics HOW-TO
-==============
+How to Obtain BD-BR & BD-PSNR
+=============================
 
 PSNR and bitrate are two important metrics to obtain the BDBR, BDPSNR which
 are two common criteria for measuring the average PSNR differences between

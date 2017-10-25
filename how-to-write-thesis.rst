@@ -1,5 +1,5 @@
-Thesis How-To
-=============
+How to write thesis
+===================
 
 How to write abstract
 ---------------------
