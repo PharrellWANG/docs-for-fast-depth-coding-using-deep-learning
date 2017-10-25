@@ -1,8 +1,9 @@
-Thesis Outline
-==============
+Thesis
+======
 
-This section I am trying to figure out the best outline for the thesis in
-the form of the **Table of Contents**.
+Outline
+-------
+The outline below is subjected to further modifications whenever needed.
 
 - Abstract
 
@@ -68,4 +69,15 @@ the form of the **Table of Contents**.
 
 - Bibliography
 
+
+Abstract
+--------
+The Abstract below is subjected to further modifications whenever needed.
+
+.. figure:: ./images/pharrell-abstract.png
+   :scale: 100 %
+   :alt: session_one
+   :align: center
+
+   Figure 1. Abstract Screen Capture.
 

@@ -80,7 +80,7 @@ This documentation is organized into a couple sections:
 
    debug-release
    GPU
-   thesis-outline
+   thesis-related
    how-to-write-thesis
    bd-br-bd-psnr
 
