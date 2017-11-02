@@ -11,6 +11,12 @@ using deep learning.
 
    Figure 1: Flowchart for Proposed Algorithm
 
+.. figure:: _static/proposed-fast-depth-coding-algorithm.svg
+   :width: 1000px
+   :alt: proposed fast intra mode decision algorithm
+
+   Figure 2: Detailed Flowchart for Proposed Algorithm
+
 Description
 ===========
 
